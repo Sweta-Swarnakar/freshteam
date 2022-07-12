@@ -1,0 +1,1 @@
+/Users/sswarnakar/Desktop/fresh-team/node_modules/ember-cli-app-version/app/helpers/app-version.js

@@ -1,0 +1,1 @@
+/Users/sswarnakar/Desktop/fresh-team/tmp/funnel-input_base_path-ngLpk4xE.tmp/ember-bootstrap/register-version.template

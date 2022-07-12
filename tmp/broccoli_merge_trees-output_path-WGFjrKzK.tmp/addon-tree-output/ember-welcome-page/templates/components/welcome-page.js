@@ -1,0 +1,1 @@
+/Users/sswarnakar/Desktop/fresh-team/tmp/broccoli_persistent_filterbabel__babel_modules_for_templates-output_path-BTtO3kLb.tmp/ember-welcome-page/templates/components/welcome-page.js
