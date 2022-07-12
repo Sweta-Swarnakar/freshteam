@@ -9,23 +9,6 @@ body {
   background: #E5E5E5;
 }
 
-.sec-header{
-  width: 100%;
-  height: 53px;
-  background-color: #F5F7F9;
-  position: fixed;
-  top: 54px;
-
-}
-
-.emp-title{
-  padding-top: 18px;
-  color: #12344D;
-  display: flex;
-  margin: 0 0 17px 84px;
-  font-weight: 600;
- 
-}
 
 @import "/Users/sswarnakar/Desktop/fresh-team/app/layouts/leftnav.scss";
 @import '/Users/sswarnakar/Desktop/fresh-team/app/layouts/header.scss';
