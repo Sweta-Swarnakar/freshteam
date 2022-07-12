@@ -1,6 +1,6 @@
-
+@import "../abstracts/variables.scss";
 .header {
- left: 60px;
+ left: $sideNavWidth;
   height: 54px;
   position: fixed;
   top: 0;
@@ -12,7 +12,7 @@
 .logo {
   width: 34px;
   height: 34px;
-  margin: 10px 0 10px 90px;
+  margin: 10px 10px 10px 60px;
 
   // i did header 100% and required logo distance from nav is 30px so i did 60px + 30px toadjust
 

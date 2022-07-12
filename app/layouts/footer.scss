@@ -1,9 +1,11 @@
+@import "../abstracts/variables.scss";
 .footer {
 
-    width: 100%;
+    left: $sideNavWidth;
     height: 28px;
     background: #FFFFFF; 
     position: absolute;
+    right: 0;
     bottom: 0;
     border: 1px solid #CFD7DF;
     
@@ -14,5 +16,6 @@
    justify-content: center;
    text-align: center;
   color: #607787;
+  padding-top: 5px;
   }
   

@@ -9236,7 +9236,7 @@ body {
 .logo {
   width: 34px;
   height: 34px;
-  margin: 10px 0 10px 90px;
+  margin: 10px 10px 10px 60px;
 }
 
 .header-title {
@@ -9251,10 +9251,11 @@ body {
 }
 
 .footer {
-  width: 100%;
+  left: 60px;
   height: 28px;
   background: #FFFFFF;
   position: absolute;
+  right: 0;
   bottom: 0;
   border: 1px solid #CFD7DF;
 }
@@ -9264,6 +9265,7 @@ body {
   justify-content: center;
   text-align: center;
   color: #607787;
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=fresh-team.css.map */
