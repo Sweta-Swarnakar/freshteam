@@ -9200,13 +9200,12 @@ body {
 }
 
 .left-nav {
-  width: 60px;
+  width: sideNav;
   background-color: #12344D;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .icon-logo-container {
@@ -9225,7 +9224,7 @@ body {
 }
 
 .header {
-  width: 100%;
+  left: 60px;
   height: 54px;
   position: fixed;
   top: 0;
@@ -9244,9 +9243,7 @@ body {
   color: #41637c;
   font-weight: 600;
   width: fit-content;
-  position: relative;
-  left: 150px;
-  bottom: 40px;
+  padding: 20px;
 }
 
 .header-title:hover {
@@ -9264,7 +9261,8 @@ body {
 
 .footer-content {
   font-size: 12px;
-  margin: 5px 0 7px 800px;
+  justify-content: center;
+  text-align: center;
   color: #607787;
 }
 

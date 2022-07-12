@@ -1242,7 +1242,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("fresh-team/app")["default"].create({"name":"fresh-team","version":"0.0.0+797d4446"});
+            require("fresh-team/app")["default"].create({"name":"fresh-team","version":"0.0.0+278b6733"});
           }
         
 //# sourceMappingURL=fresh-team.map
