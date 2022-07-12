@@ -10,9 +10,9 @@ body {
 }
 
 
-@import '/Users/sswarnakar/Documents/GitHub/freshteam/app/layouts/leftnav.scss';
-@import '/Users/sswarnakar/Documents/GitHub/freshteam/app/layouts/header.scss';
-@import "/Users/sswarnakar/Documents/GitHub/freshteam/app/layouts/footer.scss";
+@import 'app/layouts/leftnav.scss';
+@import 'app/layouts/header.scss';
+@import "app/layouts/leftnav.scss";
 
 
 
