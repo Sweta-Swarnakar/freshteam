@@ -1,5 +1,7 @@
+@import "../abstracts/variables.scss";
+
 .left-nav {
-    width: 60px;
+    width: sideNav;
     background-color: #12344D;;
     position: fixed;
     left: 0;
