@@ -1,0 +1,33 @@
+
+.header {
+ left: 60px;
+  height: 54px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: #ebeef0;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  margin: 10px 0 10px 90px;
+
+  // i did header 100% and required logo distance from nav is 30px so i did 60px + 30px toadjust
+
+ 
+}
+
+.header-title {
+  color: #41637c;
+ 
+ font-weight: 600;
+  width: fit-content;
+  padding: 20px;
+ 
+}
+
+.header-title:hover {
+  text-decoration: underline 1px solid violet;
+}

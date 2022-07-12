@@ -1,0 +1,1 @@
+export default Ember.HTMLBars.template({"id":"VBapCW4f","block":"{\"symbols\":[\"&default\"],\"statements\":[[14,1]],\"hasEval\":false}","meta":{"moduleName":"ember-bootstrap/templates/components/bs-carousel/slide.hbs"}});
