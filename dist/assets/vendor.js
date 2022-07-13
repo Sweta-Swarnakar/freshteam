@@ -99430,6 +99430,22 @@ define("ember-resolver/features", [], function () {
     return cache;
   }
 });
+;define("ember-svg-jar/inlined/candidates", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _default = {
+    "content": "<title>customers</title><path d=\"M44.3 30.5c-4.6 0-8.4-3.7-8.4-8.3s3.8-8.3 8.4-8.3 8.4 3.7 8.4 8.3-3.8 8.3-8.4 8.3zm0-4.6c2.1 0 3.8-1.7 3.8-3.8s-1.7-3.8-3.8-3.8c-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8zm-24.5 6.5c-6.2 0-11.2-5-11.2-11.2S13.6 10 19.8 10 31 15 31 21.2s-5 11.2-11.2 11.2zm0-4.6c3.7 0 6.7-3 6.7-6.6s-3-6.6-6.7-6.6-6.7 3-6.7 6.6 3.1 6.6 6.7 6.6zM6.6 48.7c0 1.3-1 2.3-2.3 2.3S2 50 2 48.7c0-7.5 6.1-13.6 13.7-13.6h7.6c7.6 0 13.7 6.1 13.7 13.6 0 1.3-1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-5-4.1-9.1-9.1-9.1h-7.6c-5 0-9.1 4.1-9.1 9.1zm30.1-11c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3h11.9c5.2 0 9.4 4.4 9.4 9.8 0 1.3-1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-3-2.2-5.3-4.9-5.3H36.7z\"/>",
+    "attrs": {
+      "xmlns": "http://www.w3.org/2000/svg",
+      "viewBox": "0 0 60 60"
+    }
+  };
+  _exports.default = _default;
+});
 ;define("ember-svg-jar/inlined/flower41b", ["exports"], function (_exports) {
   "use strict";
 

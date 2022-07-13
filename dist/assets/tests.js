@@ -35,6 +35,11 @@ define('fresh-team/tests/lint/app.lint-test', [], function () {
     assert.ok(true, 'router.js should pass ESLint\n\n');
   });
 
+  QUnit.test('routes/index.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/index.js should pass ESLint\n\n');
+  });
+
   QUnit.test('routes/users.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/users.js should pass ESLint\n\n');
@@ -58,6 +63,11 @@ define('fresh-team/tests/lint/templates.template.lint-test', [], function () {
   QUnit.test('fresh-team/templates/application.hbs', function (assert) {
     assert.expect(1);
     assert.ok(true, 'fresh-team/templates/application.hbs should pass TemplateLint.\n\n');
+  });
+
+  QUnit.test('fresh-team/templates/index.hbs', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'fresh-team/templates/index.hbs should pass TemplateLint.\n\n');
   });
 
   QUnit.test('fresh-team/templates/users.hbs', function (assert) {
@@ -88,6 +98,11 @@ define('fresh-team/tests/lint/tests.lint-test', [], function () {
   QUnit.test('unit/models/user-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/user-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/index-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/index-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('unit/routes/users-test.js', function (assert) {
@@ -149,6 +164,18 @@ define('fresh-team/tests/unit/models/user-test', ['qunit', 'ember-qunit'], funct
       let store = this.owner.lookup('service:store');
       let model = store.createRecord('user', {});
       assert.ok(model);
+    });
+  });
+});
+define('fresh-team/tests/unit/routes/index-test', ['qunit', 'ember-qunit'], function (_qunit, _emberQunit) {
+  'use strict';
+
+  (0, _qunit.module)('Unit | Route | index', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:index');
+      assert.ok(route);
     });
   });
 });
