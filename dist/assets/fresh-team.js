@@ -1612,6 +1612,7 @@
     value: true
   });
   exports.default = _emberData.default.Model.extend({
+    img_url: _emberData.default.attr('string'),
     first_name: _emberData.default.attr('string'),
     last_name: _emberData.default.attr('string'),
     email: _emberData.default.attr('string'),
@@ -1668,7 +1669,9 @@
     exports.default = Ember.Route.extend({
 
         model() {
-            return this.store.findAll('user');
+            // return this.store.findAll('user');
+
+
         }
 
     });
@@ -1880,7 +1883,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("fresh-team/app")["default"].create({"name":"fresh-team","version":"0.0.0+fcdc43bb"});
+            require("fresh-team/app")["default"].create({"name":"fresh-team","version":"0.0.0+23b37e7d"});
           }
         
 //# sourceMappingURL=fresh-team.map
