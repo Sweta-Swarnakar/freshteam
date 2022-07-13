@@ -1,1 +1,0 @@
-/Users/sswarnakar/Desktop/fresh-team/tmp/broccoli_persistent_filterbabel__babel_ember_inflector-output_path-fCl7FpTF.tmp/ember-inflector/lib/helpers/singularize.js
