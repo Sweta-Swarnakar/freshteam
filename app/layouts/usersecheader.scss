@@ -1,0 +1,20 @@
+@import "../abstracts/variables.scss";
+.sec-header{
+    left: $sideNavWidth;
+    right: 0;
+    height: 53px;
+    background-color: $secHeaderUsers;
+    position: fixed;
+    top: 54px;
+  
+  }
+
+  .emp-title{
+    padding-top: 18px;
+    color: $leftNavBg;
+    display: flex;
+    margin: 0 0 17px 84px;
+    font-weight: 600;
+   
+  }
+  

@@ -1813,7 +1813,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "NPEoyRh6", "block": "{\"symbols\":[],\"statements\":[[7,\"body\"],[11,\"class\",\"main\"],[9],[0,\"\\n\\n  \"],[7,\"div\"],[11,\"class\",\"left-nav\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"icon-logo-container\"],[9],[0,\"\\n      \"],[1,[27,\"svg-jar\",[\"ft\"],[[\"class\"],[\"icon-logo\"]]],false],[0,\"\\n    \"],[10],[0,\"\\n\\n\\n    \"],[7,\"div\"],[11,\"class\",\"emp-logo-container\"],[9],[0,\"\\n\"],[4,\"link-to\",[\"users\"],[[\"class\"],[\"emp-logo-container\"]],{\"statements\":[[0,\"             \"],[1,[27,\"svg-jar\",[\"candidates\"],[[\"class\"],[\"emp-logo\"]]],false],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"       \\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\\n  \"],[7,\"header\"],[11,\"class\",\"header\"],[9],[0,\"\\n    \"],[7,\"img\"],[11,\"class\",\"logo\"],[11,\"src\",\"assets/brand-header-logo.png\"],[11,\"alt\",\"freshteam logo\"],[9],[10],[0,\"\\n    \"],[7,\"span\"],[11,\"class\",\"header-title\"],[9],[0,\"Talent Center\"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \\n  \"],[7,\"main\"],[11,\"class\",\"content\"],[9],[0,\"\\n       \"],[1,[21,\"outlet\"],false],[0,\"\\n \\n  \"],[10],[0,\"\\n\\n  \"],[7,\"footer\"],[11,\"class\",\"footer\"],[9],[0,\"\\n    \"],[7,\"p\"],[11,\"class\",\"footer-content\"],[9],[0,\"\\n      HR Software by Freshworks | Knowledge Base\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "fresh-team/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "ml9uVJet", "block": "{\"symbols\":[],\"statements\":[[7,\"body\"],[11,\"class\",\"main\"],[9],[0,\"\\n\\n  \"],[7,\"div\"],[11,\"class\",\"left-nav\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"icon-logo-container\"],[9],[0,\"\\n      \"],[1,[27,\"svg-jar\",[\"ft\"],[[\"class\"],[\"icon-logo\"]]],false],[0,\"\\n    \"],[10],[0,\"\\n\\n    \"],[7,\"div\"],[11,\"class\",\"emp-logo-container\"],[9],[0,\"\\n\"],[4,\"link-to\",[\"users\"],null,{\"statements\":[[0,\"             \"],[1,[27,\"svg-jar\",[\"candidates\"],[[\"class\"],[\"emp-logo\"]]],false],[0,\"   \\n    \\n\"]],\"parameters\":[]},null],[0,\"    \"],[10],[0,\"\\n    \\n    \"],[10],[0,\"\\n\\n\\n  \"],[7,\"header\"],[11,\"class\",\"header\"],[9],[0,\"\\n    \"],[7,\"img\"],[11,\"class\",\"logo\"],[11,\"src\",\"assets/brand-header-logo.png\"],[11,\"alt\",\"freshteam logo\"],[9],[10],[0,\"\\n    \"],[7,\"span\"],[11,\"class\",\"header-title\"],[9],[0,\"Talent Center\"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \\n  \"],[7,\"main\"],[11,\"class\",\"content\"],[9],[0,\"\\n       \"],[1,[21,\"outlet\"],false],[0,\"\\n \\n  \"],[10],[0,\"\\n\\n  \"],[7,\"footer\"],[11,\"class\",\"footer\"],[9],[0,\"\\n    \"],[7,\"p\"],[11,\"class\",\"footer-content\"],[9],[0,\"\\n      HR Software by Freshworks | Knowledge Base\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "fresh-team/templates/application.hbs" } });
 });
 ;define('fresh-team/templates/components/ember-popper-targeting-parent', ['exports', 'ember-popper/templates/components/ember-popper-targeting-parent'], function (exports, _emberPopperTargetingParent) {
   'use strict';
@@ -1855,7 +1855,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "h3eTF68b", "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n\"],[7,\"div\"],[9],[0,\"\\n\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "fresh-team/templates/users.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "amXesPUH", "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"sec-header\"],[9],[0,\"\\n    \"],[7,\"span\"],[11,\"class\",\"emp-title\"],[9],[0,\"Employees\"],[10],[0,\"\\n  \"],[10]],\"hasEval\":false}", "meta": { "moduleName": "fresh-team/templates/users.hbs" } });
 });
 ;
 
@@ -1880,7 +1880,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("fresh-team/app")["default"].create({"name":"fresh-team","version":"0.0.0+be961026"});
+            require("fresh-team/app")["default"].create({"name":"fresh-team","version":"0.0.0+fcdc43bb"});
           }
         
 //# sourceMappingURL=fresh-team.map
