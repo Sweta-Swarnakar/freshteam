@@ -5,16 +5,17 @@
     height: 28px;
     background: #FFFFFF; 
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     border: 1px solid #CFD7DF;
     
   }
   
   .footer-content{
     font-size: 12px;
+   justify-content: center;
    text-align: center;
-   margin-top: 5px;
   color: #607787;
+  padding-top: 5px;
   }
   

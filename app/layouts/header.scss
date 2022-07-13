@@ -1,3 +1,4 @@
+
 @import "../abstracts/variables.scss";
 .header {
  left: $sideNavWidth;
@@ -5,8 +6,8 @@
   position: fixed;
   top: 0;
   right: 0;
-  background: #ffffff;
-  box-shadow: #ebeef0;
+  background: $headerBackground;
+  box-shadow: $headerBoxShadow;
 }
 
 .logo {
@@ -20,15 +21,14 @@
 }
 
 .header-title {
-  color: #41637c;
+  color: $headerTitle #41637c;
  
  font-weight: 600;
- justify-self: center;
- text-align: center;
-  
+  width: fit-content;
+  padding: 20px;
  
 }
 
 .header-title:hover {
-  text-decoration: underline 1px solid violet;
+  text-decoration: underline 1px solid $headerTitleHover;
 }
