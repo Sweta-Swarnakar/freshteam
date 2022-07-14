@@ -2,7 +2,24 @@
     <p class="emp-title">Employees</p>
   </div>
 
-  <div>
-     <h1>total users: {{model.length}}</h1>  
+  <div class="card-container">
+
+     <div class="card">
+      
+        <p class="card-name">
+         {{#each model as |user|}}
+
+<div>
+{{#user-avatar name = user.first_name img=user.img_url}} {{/user-avatar}}
+</div>
+           
+            <p>{{user.first_name}} {{user.last_name}}</p>
+             <p>{{user.email}}
+
+             </p>
+         {{/each}}
+        </p>
+
+     </div>  
     
   </div>

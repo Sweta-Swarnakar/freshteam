@@ -1,0 +1,11 @@
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+}
+
+.card-name{
+    font-size: 14px;
+}
+
+
+
