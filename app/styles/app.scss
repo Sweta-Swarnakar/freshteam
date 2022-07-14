@@ -1,0 +1,16 @@
+
+@import "ember-bootstrap/bootstrap";
+@import "app/abstracts/variables.scss";
+
+
+body {
+  min-height: 100vh;
+  position: relative;
+  
+  background: $bodyBackground;
+}
+
+
+@import 'app/layouts/leftnav.scss';
+@import 'app/layouts/header.scss';
+@import "app/layouts/footer.scss";
