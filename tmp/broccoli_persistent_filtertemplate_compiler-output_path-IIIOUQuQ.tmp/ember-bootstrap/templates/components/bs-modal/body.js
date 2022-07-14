@@ -1,1 +1,0 @@
-export default Ember.HTMLBars.template({"id":"lzUvbuQc","block":"{\"symbols\":[\"&default\"],\"statements\":[[14,1]],\"hasEval\":false}","meta":{"moduleName":"ember-bootstrap/templates/components/bs-modal/body.hbs"}});

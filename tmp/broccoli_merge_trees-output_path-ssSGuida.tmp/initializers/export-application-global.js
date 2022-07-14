@@ -1,1 +1,0 @@
-/Users/sswarnakar/Desktop/fresh-team/node_modules/ember-export-application-global/app/initializers/export-application-global.js

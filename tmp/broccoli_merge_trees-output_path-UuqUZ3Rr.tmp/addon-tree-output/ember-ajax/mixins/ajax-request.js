@@ -1,1 +1,0 @@
-/Users/sswarnakar/Desktop/fresh-team/tmp/broccoli_persistent_filterbabel__babel_ember_ajax-output_path-gjKfr5sN.tmp/ember-ajax/mixins/ajax-request.js
