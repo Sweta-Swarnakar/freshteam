@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import EmberObject from '@ember/object';
+//import EmberObject from '@ember/object';
 import { set } from '@ember/object';
 
 module('Integration | Component | user-avatar', function (hooks) {
@@ -36,15 +36,7 @@ module('Integration | Component | user-avatar', function (hooks) {
     });
   });
 
-//   test('it renders img when a user with avatar is passed', async function(assert) {
-//     await render(hbs`{{user-avatar user = this.user}}`);
-//     //assert.equal(this.element.find('.avatar img').innerHtml.includes('img'));
 
-  
-//     assert.dom('[data-test-id="user-avatar"]').exists('The img tag exists');
-//     //assert.dom('[data-test-id="user-avatar"]').doesNotexist('The img tag does not exist');
-
-//  });
  test('it renders img when a user with avatar is passed', async function(assert) {
   set(this, 'user.img_url', null); 
   await render(hbs`{{user-avatar user = this.user}}`);
