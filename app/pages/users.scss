@@ -1,4 +1,4 @@
-
+@import "app/abstracts/variables.scss";
 .circle-div{
     padding: 12px;
    margin-left: 18px;
@@ -17,7 +17,7 @@ border-radius: 50%
 
 .card{
 
-    background: #FFFFFF;
+    background: $footerBg;
     float: left;
     width: 220px;
     padding: 50px 20px;
@@ -33,7 +33,7 @@ line-height: 53px;
 justify-content: center;
 text-align: center;
 
-color: #FFFFFF;
+color: $footerBg;
 }
 
 
