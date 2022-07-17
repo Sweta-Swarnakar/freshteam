@@ -8,9 +8,6 @@ body {
   background: $bodyBackground;
 }
 
-.content {
-  margin: 200px;
-}
 
 @import "app/layouts/leftnav.scss";
 @import "app/layouts/header.scss";

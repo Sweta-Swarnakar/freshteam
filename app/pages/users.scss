@@ -1,7 +1,32 @@
 @import "app/abstracts/variables.scss";
+
+.cards-container{
+  
+    display: grid;
+    grid-gap: 9px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    margin: 130px 18px 100px 84px;
+}
+
+.card{
+
+    background: $footerBg;
+    
+    padding: 50px 20px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.card-text{
+    font-weight: 400;
+font-size: 44px;
+
+color: $footerBg;
+}
+
 .circle-div{
-    padding: 12px;
-   margin-left: 18px;
+    
+   margin-left: 50px;
     width: 82px;
     height: 82px;
     margin-bottom: 20px;
@@ -15,26 +40,9 @@ height: 100%;
 border-radius: 50%
 }
 
-.card{
 
-    background: $footerBg;
-    float: left;
-    width: 220px;
-    padding: 50px 20px;
-    border-radius: 2px;
-    text-align: center;
-}
 
-.card-text{
-    font-weight: 400;
-font-size: 44px;
-line-height: 53px;
-/* identical to box height */
-justify-content: center;
-text-align: center;
 
-color: $footerBg;
-}
 
 
 
