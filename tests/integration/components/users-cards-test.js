@@ -3,6 +3,8 @@ import { setupRenderingTest } from 'ember-qunit';
  import { render } from '@ember/test-helpers';
  import hbs from 'htmlbars-inline-precompile';
 
+ 
+
 // import {
   
 //   visit,
@@ -14,9 +16,10 @@ import { setupRenderingTest } from 'ember-qunit';
 module('Integration | Component | users-cards', function(hooks) {
   setupRenderingTest(hooks);
 
+
   test('should list available cards.', async function (assert) {
     
-
+   
     await render(hbs`{{users-cards}}`);
 
    
