@@ -1,8 +1,25 @@
+<BsDropdown as |dd|>
+  <dd.toggle>{{selectedTeam}}<span class="caret">
+     
+  </span></dd.toggle>
+  <dd.menu as |ddm|>
+      {{#each this.teams as |team|}}
 
-{{#each model as |user|}}
+           <option {{action "selectTeam" team}}>{{team}}</option>
+      {{/each}}
+   
 
-      {{#user-card user = user}}{{/user-card}}
+  </dd.menu>
+</BsDropdown>
 
 
-      
-      {{/each}} 
+
+<div class="card-container">
+
+      {{#each this.filteredUsers as |user|}}
+
+      {{#user-card user=user}}{{/user-card}}
+
+      {{/each}}
+
+</div>

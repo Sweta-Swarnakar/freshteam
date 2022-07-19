@@ -9,4 +9,6 @@ export default Route.extend({
         return this.store.findAll('user');
 
     }
+
+    
 });

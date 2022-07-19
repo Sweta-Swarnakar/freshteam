@@ -1,17 +1,23 @@
 @import "app/abstracts/variables.scss";
 
-.cards-container{
-  
+.content{
+
+    margin-top: 108px;
+    margin-left: 60px;
+    padding: 9px;
+    border: 1px solid red;
+}
+
+.card-container{
     display: grid;
     grid-gap: 9px;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    margin: 130px 18px 100px 84px;
+   
 }
 
 .card{
 
-    background: $footerBg;
-    
+    background: $footerBg; 
     padding: 50px 20px;
     border-radius: 2px;
     text-align: center;
