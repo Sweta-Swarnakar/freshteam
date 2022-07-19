@@ -1,0 +1,24 @@
+<div class="sec-header">
+  <p class="emp-title">Employees</p>
+</div>
+
+
+
+  <div class="card">
+
+    {{!-- {{#each model as |user|}}
+
+      {{#user-avatar name=user.first_name img=user.img_url}}{{/user-avatar}}
+
+      <p>{{user.first_name}} {{user.last_name}}</p>
+      <p>{{user.email}}
+
+      </p>
+    {{/each}}  --}}
+
+    {{#user-avatar user=model.firstObject}}{{/user-avatar}}
+
+  </div>
+ 
+
+
