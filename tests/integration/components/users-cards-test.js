@@ -1,48 +1,29 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
- import { render } from '@ember/test-helpers';
- import hbs from 'htmlbars-inline-precompile';
+import { render } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 
- 
-
-// import {
-  
-//   visit,
-  
-// } from '@ember/test-helpers'
-
-
-
-module('Integration | Component | users-cards', function(hooks) {
+module('Integration | Component | users-cards', function (hooks) {
   setupRenderingTest(hooks);
+  setupMirage(hooks);
 
+  test("I can view the users", async function (assert) {
 
-  test('should list available cards.', async function (assert) {
-    
-   
-    await render(hbs`{{users-cards}}`);
+    this.users = this.server.createList('user', 15);
+    await render(hbs`{{users-cards model=this.users}}`);
 
-   
-      //await visit('/');
-      assert.equal(this.element.querySelectorAll('.card').length, 15, 'should display 15 cards');
-    });
+    assert.dom(".card").exists({ count: 15 }, 'shows 15 data')
+  });
 
+  test("I can view details of card ", async function (assert) {
+
+    this.users = this.server.createList('user', 15);
+    await render(hbs`{{users-cards model=this.users.firstObject}}`);
+
+    assert.dom('.circle-div').exists('the circle is present');
+    assert.dom('strong.name').hasText(this.users.name);
+    assert.dom('p.email').hasText(this.users.email);
+
+  });
 });
-
-
-// hooks.beforeEach(function () {
-//   this.store = this.owner.lookup('service:store');
-//   this.user = this.store.createRecord('user', {
-
-//     img_url: 'fake.png',
-//     first_name: 'test-first_name',
-//     last_name: 'test-last_name',
-//     email: 'test-email',
-//     team: 'test-team',
-//     joiningDate: 'test-date'
-
-//   });
-
-  
-
-// });

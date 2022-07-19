@@ -3,26 +3,9 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | user-card', function(hooks) {
+module('Integration | Component | user-card', function (hooks) {
   setupRenderingTest(hooks);
 
-  // test('it renders', async function(assert) {
-  //   // Set any properties with this.set('myProperty', 'value');
-  //   // Handle any actions with this.set('myAction', function(val) { ... });
-
-  //   await render(hbs`{{user-card}}`);
-
-  //   assert.equal(this.element.textContent.trim(), '');
-
-  //   // Template block usage:
-  //   await render(hbs`
-  //     {{#user-card}}
-  //       template block text
-  //     {{/user-card}}
-  //   `);
-
-  //   assert.equal(this.element.textContent.trim(), 'template block text');
-  // });
 
   hooks.beforeEach(function () {
     this.store = this.owner.lookup('service:store');
@@ -39,15 +22,15 @@ module('Integration | Component | user-card', function(hooks) {
   });
 
 
- test('if the all the elements are present or not', async function(assert) {
-  // set(this, 'user.img_url', null); 
-  await render(hbs`{{user-card user = this.user}}`);
-  
-  assert.dom('.circle-div').exists('the circle is present');
-  assert.dom('strong.name').hasAnyText();
-  assert.dom('p.email').hasAnyText();
+  test('if the all the elements are present or not', async function (assert) {
+    // set(this, 'user.img_url', null); 
+    await render(hbs`{{user-card user = this.user}}`);
 
-});
+    assert.dom('.circle-div').exists('the circle is present');
+    assert.dom('strong.name').hasAnyText();
+    assert.dom('p.email').hasAnyText();
+
+  });
 });
 
 // });

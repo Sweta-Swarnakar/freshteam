@@ -8,20 +8,6 @@ import { set } from '@ember/object';
 module('Integration | Component | user-avatar', function (hooks) {
   setupRenderingTest(hooks);
 
-  // test('it renders img when a user with avatar is passed', async function(assert) {
-  //   let store = ;
-  //   this.user = this.store.createRecord('user', {
-  //     firstName: '',
-  //     avatar: ''
-  //   })
-
-  //   await render(hbs`{{user-avatar user=user}}`);
-
-
-
-  //});
-
-
   hooks.beforeEach(function () {
     this.store = this.owner.lookup('service:store');
     this.user = this.store.createRecord('user', {
