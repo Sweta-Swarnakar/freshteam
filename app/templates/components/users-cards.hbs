@@ -1,25 +1,34 @@
-<BsDropdown as |dd|>
-  <dd.toggle>{{selectedTeam}}<span class="caret">
-     
-  </span></dd.toggle>
-  <dd.menu as |ddm|>
+<div class="functionalities">
+  <label class="browse">Browse: </label>
+  <BsDropdown as |dd|>
+
+    <dd.toggle>{{selectedTeam}}<span class="caret">
+
+      </span></dd.toggle>
+    <dd.menu as |ddm|>
       {{#each this.teams as |team|}}
-
-           <option {{action "selectTeam" team}}>{{team}}</option>
+        {{!-- {{! write a helper function equal to check if passed selectedTeam is same as team if true add active class }}
+        <option
+          {{action "selectTeam" team}}
+          data-test-id={{team}}
+          class={{if (equal-helper selectedTeam team) "active-bg"}}
+        >
+          {{#if (equal-helper selectedTeam team)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}{{team}}</option> --}}
       {{/each}}
-   
 
-  </dd.menu>
-</BsDropdown>
+    </dd.menu>
+  </BsDropdown>
 
-
+</div>
 
 <div class="card-container">
 
-      {{#each this.filteredUsers as |user|}}
+  {{#each this.filteredUsers as |user|}}
 
-      {{#user-card user=user}}{{/user-card}}
+    {{#user-card user=user}}{{/user-card}}
 
-      {{/each}}
+  {{/each}}
 
 </div>

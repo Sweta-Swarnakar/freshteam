@@ -6,7 +6,7 @@ export default Component.extend({
     classNames: ["content"],
     selectedTeam: "All Employees",
 
-    teams: computed(function () {
+    teams: computed('model', function () {
         let temp = ["All Employees"];
 
         let users = this.model;
@@ -33,10 +33,23 @@ export default Component.extend({
             })}
         }),
 
+        isSelected: computed('selectedTeam', 'team', function()
+        {
+            let selectedTeam = get(this, 'selectedTeam');
+
+            if(this.team == selectedTeam)
+            {
+                return true;
+            }
+        }),
+
     actions: {
         selectTeam(team) {
             set(this, 'selectedTeam', team);
         }
+        // isSelected(team) {
+        //     return team === get(this, 'selectedTeam');
+        // }
     }
 
 
