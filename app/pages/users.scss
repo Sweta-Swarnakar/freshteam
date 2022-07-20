@@ -1,0 +1,49 @@
+@import "app/abstracts/variables.scss";
+
+.cards-container{
+  
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    margin: 130px 18px 100px 84px;
+}
+
+.card{
+
+    background: $footerBg;
+    
+    padding: 50px 20px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.card-text{
+    font-weight: 400;
+font-size: 44px;
+
+color: $footerBg;
+}
+
+.circle-div{
+    
+   margin-left: 50px;
+    width: 82px;
+    height: 82px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  
+}
+
+.avatar{
+width: 100%;
+height: 100%;
+border-radius: 50%
+}
+
+
+
+
+
+
+
+

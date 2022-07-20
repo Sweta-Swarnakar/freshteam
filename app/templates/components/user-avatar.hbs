@@ -1,0 +1,24 @@
+{{#if user.img_url}}
+
+  <div class="circle-div">
+    <img class="avatar" data-test-id="user-avatar" src="{{user.img_url}}" />
+  </div>
+{{else}}
+
+  <div class="circle-div"  data-test-id="no-user-avatar" style="background-color:{{this.randomColor}}">
+    <span class="card-text">
+        {{this.firstChar}}
+    </span>
+    
+  </div>
+
+{{/if}} 
+
+
+
+
+
+
+
+
+ 
