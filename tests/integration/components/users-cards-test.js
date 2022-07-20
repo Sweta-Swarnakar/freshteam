@@ -8,22 +8,23 @@ module('Integration | Component | users-cards', function (hooks) {
   setupRenderingTest(hooks);
   setupMirage(hooks);
 
-  test("I can view the users", async function (assert) {
+  // test("I can view the users", async function (assert) {
 
-    this.users = this.server.createList('user', 15);
-    await render(hbs`{{users-cards model=this.users}}`);
+  //   this.users = this.server.createList('user', 15);
+  //   await render(hbs`{{users-cards model=this.users}}`);
 
-    assert.dom(".card").exists({ count: 15 }, 'shows 15 data')
-  });
+  //   assert.dom(".card").exists({ count: 15 }, 'shows 15 data')
+  // });
 
   test("I can view details of card ", async function (assert) {
 
-    this.users = this.server.createList('user', 15);
-    await render(hbs`{{users-cards model=this.users.firstObject}}`);
+    this.users = [this.server.createList('user', 15)].firstObject;
+    await render(hbs`{{users-cards model=this.users}}`);
 
     assert.dom('.circle-div').exists('the circle is present');
-    assert.dom('strong.name').hasText(this.users.name);
-    assert.dom('p.email').hasText(this.users.email);
+    let name = [this.users.firstObject.first_name, this.users.firstObject.last_name].join(' ');
+    assert.dom('.name').hasTextContaining(name);
+    assert.dom('.email').hasText(this.users.firstObject.email);
 
   });
 });
