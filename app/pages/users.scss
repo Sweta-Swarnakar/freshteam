@@ -3,7 +3,7 @@
 .cards-container{
   
     display: grid;
-    grid-gap: 9px;
+    grid-gap: 18px;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     margin: 130px 18px 100px 84px;
 }
