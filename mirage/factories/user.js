@@ -15,7 +15,7 @@ export default Factory.extend({
     return `Person@${i,i+ 1}`;
   },
 
-  team: 'abc',
+  team: 'Freshteam',
   
   joiningDate:  Date.now() + Math.random(),
 

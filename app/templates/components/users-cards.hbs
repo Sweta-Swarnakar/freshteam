@@ -7,7 +7,7 @@
       </span></dd.toggle>
     <dd.menu as |ddm|>
       {{#each this.teams as |team|}}
-        {{!-- {{! write a helper function equal to check if passed selectedTeam is same as team if true add active class }}
+        {{! write a helper function equal to check if passed selectedTeam is same as team if true add active class }}
         <option
           {{action "selectTeam" team}}
           data-test-id={{team}}
@@ -15,7 +15,7 @@
         >
           {{#if (equal-helper selectedTeam team)}}
             {{svg-jar "checkbox"}}
-          {{/if}}{{team}}</option> --}}
+          {{/if}}{{team}}</option>
       {{/each}}
 
     </dd.menu>
