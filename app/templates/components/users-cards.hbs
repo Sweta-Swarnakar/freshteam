@@ -1,0 +1,86 @@
+<div class="functionalities">
+  <label class="browse">Browse: </label>
+  <BsDropdown as |dd|>
+
+    <dd.toggle>{{selectedTeam}}<span class="caret">
+
+      </span></dd.toggle>
+    <dd.menu as |ddm|>
+      <ul>
+      {{#each this.teams as |team|}}
+     
+        {{! write a helper function equal to check if passed selectedTeam is same as team if true add active class }}
+        <li
+          {{action "selectTeam" team}}
+          data-test-id={{team}}
+          class={{if (equal-helper selectedTeam team) "active-bg"}}
+        >{{team}}
+          {{#if (equal-helper selectedTeam team)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}</li>
+      {{/each}}
+      </ul>
+
+    </dd.menu>
+  </BsDropdown>
+    <label class="sort">Sort By: </label>
+
+  
+    <BsDropdown as |dd|>
+
+    <dd.toggle data-test-id="sort-click" ><span class="caret">
+
+      </span>
+       {{#if (equal-helper selectedType "first_name")}}
+            First Name
+            {{else}}
+            Last Name
+          {{/if}}</dd.toggle>
+    <dd.menu as |ddm|>
+      <ul>
+        {{#each this.type as |type|}}
+
+        
+           <li
+          {{action "selectType" type.value}}
+           data-test-id={{type.value}}
+          class={{if (equal-helper selectedType type.value) "active-bg"}}
+        >{{type.displayName}}
+        {{#if (equal-helper selectedType type.value)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}
+      </li>
+        {{/each}}
+        <hr>
+
+         {{#each this.order as |order|}}
+
+        <li
+          {{action "selectOrder" order}}
+          data-test-id={{order}}
+          class={{if (equal-helper selectedOrder order) "active-bg"}}
+        >{{order}}
+          {{#if (equal-helper selectedOrder order)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}</li>
+         
+        {{/each}}
+
+        
+      </ul>
+
+    </dd.menu>
+  </BsDropdown>
+ 
+</div>
+
+<div class="card-container">
+
+
+  {{#each this.sortedArray as |user|}}
+
+    {{#user-card user=user}}{{/user-card}}
+
+  {{/each}}
+
+</div>
