@@ -1,0 +1,37 @@
+<div class="functionalities">
+  <label class="browse">Browse: </label>
+  <BsDropdown as |dd|>
+
+    <dd.toggle>{{selectedTeam}}<span class="caret">
+
+      </span></dd.toggle>
+    <dd.menu as |ddm|>
+      <ul>
+      {{#each this.teams as |team|}}
+     
+        {{! write a helper function equal to check if passed selectedTeam is same as team if true add active class }}
+        <li
+          {{action "selectTeam" team}}
+          data-test-id={{team}}
+          class={{if (equal-helper selectedTeam team) "active-bg"}}
+        >{{team}}
+          {{#if (equal-helper selectedTeam team)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}</li>
+      {{/each}}
+      </ul>
+
+    </dd.menu>
+  </BsDropdown>
+
+</div>
+
+<div class="card-container">
+
+  {{#each this.filteredUsers as |user|}}
+
+    {{#user-card user=user}}{{/user-card}}
+
+  {{/each}}
+
+</div>
