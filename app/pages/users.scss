@@ -39,6 +39,7 @@
   height: 30px;
   justify-content: center;
   padding-left: 10px;
+  position: relative;
   
 }
 
@@ -53,9 +54,17 @@
     width: 10px;
     height: 20px;
     position: absolute;
-    right: 23px;
-    top: 13px;
+    right: 12px;
+    top: 5px;
   }
+  
+}
+
+.sort{
+  color: $browseText;
+  font-weight: lighter;
+   margin-left: 79px;
+  
   
 }
 

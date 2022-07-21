@@ -41,5 +41,20 @@ module('Integration | Component | users-cards', function (hooks) {
     assert.dom('.email').hasText(this.users.firstObject.email);
  });
 
+ test("I can view sorted cards", async function (assert) {
+
+  this.users = this.server.createList('user', 15);
+  await render(hbs`{{users-cards model=this.users}}`);
+
+  await click('[data-test-id="sort-click"]');
+  
+  await click('[data-test-id="first_name"]');
+
+  let name = [this.users.firstObject.first_name, this.users.firstObject.last_name].join(' ');
+  assert.dom('.name').hasTextContaining(name);
+  assert.dom('.email').hasText(this.users.firstObject.email);
+});
+
+
 
 });

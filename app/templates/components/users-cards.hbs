@@ -23,36 +23,61 @@
 
     </dd.menu>
   </BsDropdown>
+    <label class="sort">Sort By: </label>
 
+  
+    <BsDropdown as |dd|>
 
-    {{!-- <BsDropdown as |dd|>
+    <dd.toggle data-test-id="sort-click" ><span class="caret">
 
-    <dd.toggle>first name<span class="caret">
-
-      </span></dd.toggle>
+      </span>
+       {{#if (equal-helper selectedType "first_name")}}
+            First Name
+            {{else}}
+            Last Name
+          {{/if}}</dd.toggle>
     <dd.menu as |ddm|>
       <ul>
-        {{#each this.sortByArr as |sortBy|}}
+        {{#each this.type as |type|}}
 
         
-          <li
-            {{action "selectSortType" sortBy}}
-            data-test-id={{sortBy}}
-            class={{if (equal-helper selectedSortType sortBy) "active-bg"}}
-          >{{sortBy}}
-            {{#if (equal-helper selectedSortType sortBy)}}
-              {{svg-jar "checkbox"}}
-            {{/if}}</li> 
+           <li
+          {{action "selectType" type.value}}
+           data-test-id={{type.value}}
+          class={{if (equal-helper selectedType type.value) "active-bg"}}
+        >{{type.displayName}}
+        {{#if (equal-helper selectedType type.value)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}
+      </li>
         {{/each}}
+        <hr>
+
+         {{#each this.order as |order|}}
+
+        <li
+          {{action "selectOrder" order}}
+          data-test-id={{order}}
+          class={{if (equal-helper selectedOrder order) "active-bg"}}
+        >{{order}}
+          {{#if (equal-helper selectedOrder order)}}
+            {{svg-jar "checkbox"}}
+          {{/if}}</li>
+         
+        {{/each}}
+
+        
       </ul>
 
     </dd.menu>
-  </BsDropdown> --}}
+  </BsDropdown>
+ 
 </div>
 
 <div class="card-container">
 
-  {{#each this.filteredUsers as |user|}}
+
+  {{#each this.sortedArray as |user|}}
 
     {{#user-card user=user}}{{/user-card}}
 

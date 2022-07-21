@@ -5,9 +5,28 @@ export default Component.extend({
 
     classNames: ["content"],
     selectedTeam: "All Employees",
-    sortByArr: computed(function(){
-       return ['First Name', 'Last Name', 'Ascending', 'Descending'];
+
+    selectedOrder: "Ascending",
+
+    selectedType: "first_name",
+
+
+
+    type: computed(function () {
+        return [{
+            displayName: 'First Name',
+            value: 'first_name'
+        },
+        {
+            displayName: 'Last Name',
+            value: 'last_name'
+        }];
     }),
+
+    order: computed(function () {
+        return ['Ascending', 'Descending'];
+    }),
+
 
     teams: computed('model', function () {
         let temp = ["All Employees"];
@@ -27,33 +46,64 @@ export default Component.extend({
 
         let team = get(this, 'selectedTeam');
         if (team === "All Employees") {
-            return this.model;
+            return this.model.filter(el => el);
         }
 
         else {
             return this.model.filter((el) => {
                 return el.team == team;
-            })}
-        }),
+            })
+        }
+    }),
 
-        isSelected: computed('selectedTeam', 'team', function()
+
+    sortedArray: computed('filteredUsers.[]', 'selectedType', 'selectedOrder', function () {
+        
+        let filterUsers = get(this, 'filteredUsers');
+
+        var selectedType = get(this, 'selectedType');
+
+        let selectedOrder = get(this, 'selectedOrder');
+
+        if(selectedOrder == "Ascending" || "")
         {
-            let selectedTeam = get(this, 'selectedTeam');
+           filterUsers.sort((user1, user2) =>
+           {
+            return user1[selectedType] > user2[selectedType] ? 1 : -1;
+           })
 
-            if(this.team == selectedTeam)
-            {
-                return true;
-            }
-        }),
 
+        }
+
+        else  if(selectedOrder == "Descending")
+        {
+           filterUsers.sort((user1, user2) =>
+           {
+            return user1[selectedType] < user2[selectedType] ? 1 : -1;
+           })
+
+
+        }
+
+       
+        
+       return filterUsers;
+    }),
+   
     actions: {
         selectTeam(team) {
             set(this, 'selectedTeam', team);
-        }
-        // ,
-        // selectSortType(sortBy){
-        //     set(this, 'selectedSortType', )
-        // }
+        },
+       selectType(type)
+       {
+        set(this, 'selectedType', type);
+       },
+
+       selectOrder(order)
+       {
+        set(this, 'selectedOrder', order);
+       }
+
     }
 
 
@@ -61,3 +111,5 @@ export default Component.extend({
 
 
 });
+
+
