@@ -33,23 +33,13 @@ export default Component.extend({
             })}
         }),
 
-        isSelected: computed('selectedTeam', 'team', function()
-        {
-            let selectedTeam = get(this, 'selectedTeam');
-
-            if(this.team == selectedTeam)
-            {
-                return true;
-            }
-        }),
+       
 
     actions: {
         selectTeam(team) {
             set(this, 'selectedTeam', team);
         }
-        // isSelected(team) {
-        //     return team === get(this, 'selectedTeam');
-        // }
+       
     }
 
 
