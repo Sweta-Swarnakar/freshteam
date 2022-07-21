@@ -24,6 +24,30 @@
     </dd.menu>
   </BsDropdown>
 
+
+    {{!-- <BsDropdown as |dd|>
+
+    <dd.toggle>first name<span class="caret">
+
+      </span></dd.toggle>
+    <dd.menu as |ddm|>
+      <ul>
+        {{#each this.sortByArr as |sortBy|}}
+
+        
+          <li
+            {{action "selectSortType" sortBy}}
+            data-test-id={{sortBy}}
+            class={{if (equal-helper selectedSortType sortBy) "active-bg"}}
+          >{{sortBy}}
+            {{#if (equal-helper selectedSortType sortBy)}}
+              {{svg-jar "checkbox"}}
+            {{/if}}</li> 
+        {{/each}}
+      </ul>
+
+    </dd.menu>
+  </BsDropdown> --}}
 </div>
 
 <div class="card-container">

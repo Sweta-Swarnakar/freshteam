@@ -5,6 +5,9 @@ export default Component.extend({
 
     classNames: ["content"],
     selectedTeam: "All Employees",
+    sortByArr: computed(function(){
+       return ['First Name', 'Last Name', 'Ascending', 'Descending'];
+    }),
 
     teams: computed('model', function () {
         let temp = ["All Employees"];
@@ -47,8 +50,9 @@ export default Component.extend({
         selectTeam(team) {
             set(this, 'selectedTeam', team);
         }
-        // isSelected(team) {
-        //     return team === get(this, 'selectedTeam');
+        // ,
+        // selectSortType(sortBy){
+        //     set(this, 'selectedSortType', )
         // }
     }
 
