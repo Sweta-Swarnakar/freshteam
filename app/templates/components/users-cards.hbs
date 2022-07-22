@@ -72,19 +72,19 @@
     </dd.menu>
   </BsDropdown>
 
-   
-   <div class="search">
-     <i class="icon-search"></i>
-     <input type="search" placeholder="Search" />
-   
- </div>
+     {{svg-jar "search" class="search-icon"}}
+   {{input value=value class="search" 
+        key-up=(action 'handleFilterEntry' this.value)
+        class="light" 
+        placeholder="Filter By Name" }}
+      
  
 </div>
 
 <div class="card-container">
 
-
-  {{#each this.sortedArray as |user|}}
+{{!-- {{log 'searched array:' this.searchedArray}} --}}
+  {{#each this.searchedArray as |user|}}
 
     {{#user-card user=user}}{{/user-card}}
 

@@ -1,8 +1,9 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, click } from '@ember/test-helpers';
+import { render, click ,  fillIn, typeIn} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
+
 
 module('Integration | Component | users-cards', function (hooks) {
   setupRenderingTest(hooks);
@@ -54,6 +55,23 @@ module('Integration | Component | users-cards', function (hooks) {
   assert.dom('.name').hasTextContaining(name);
   assert.dom('.email').hasText(this.users.firstObject.email);
 });
+
+
+test("I can view searched cards", async function (assert) {
+
+  this.users = this.server.createList('user', 15);
+
+  await render(hbs`{{users-cards model=this.users}}`);
+
+  await typeIn('input', '14');
+
+  assert.dom(".card").exists({ count: 1 }, 'shows Person 1 card')
+  let name = [this.users.lastObject.first_name, this.users.lastObject.last_name].join(' '); 
+  assert.dom("strong.name").hasTextContaining(name);
+  assert.dom('.email').hasText(this.users.lastObject.email);
+
+});
+
 
 
 

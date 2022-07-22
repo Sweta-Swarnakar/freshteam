@@ -9,6 +9,7 @@ export default Component.extend({
     selectedOrder: "Ascending",
 
     selectedType: "first_name",
+    value: '',
 
 
 
@@ -58,51 +59,75 @@ export default Component.extend({
 
 
     sortedArray: computed('filteredUsers.[]', 'selectedType', 'selectedOrder', function () {
-        
+
         let filterUsers = get(this, 'filteredUsers');
 
         var selectedType = get(this, 'selectedType');
 
         let selectedOrder = get(this, 'selectedOrder');
 
-        if(selectedOrder == "Ascending" || "")
-        {
-           filterUsers.sort((user1, user2) =>
-           {
-            return user1[selectedType] > user2[selectedType] ? 1 : -1;
-           })
+        if (selectedOrder == "Ascending" || "") {
+            filterUsers.sort((user1, user2) => {
+                return user1[selectedType] > user2[selectedType] ? 1 : -1;
+            })
 
 
         }
 
-        else  if(selectedOrder == "Descending")
-        {
-           filterUsers.sort((user1, user2) =>
-           {
-            return user1[selectedType] < user2[selectedType] ? 1 : -1;
-           })
+        else if (selectedOrder == "Descending") {
+            filterUsers.sort((user1, user2) => {
+                return user1[selectedType] < user2[selectedType] ? 1 : -1;
+            })
 
 
         }
 
-       
-        
-       return filterUsers;
+
+
+        return filterUsers;
     }),
-   
+
+    searchedArray: computed('sortedArray.[]', 'searchedInput', function () {
+        let searchedInput = get(this, 'searchedInput');
+        let sortedArray = get(this, 'sortedArray');
+
+
+        if (searchedInput == undefined) {
+            return sortedArray;
+        }
+
+        else {
+            return sortedArray.filter((user => {
+                return (
+                    user.first_name.toLowerCase().includes(searchedInput.toLowerCase()) ||
+                    user.team.toLowerCase().includes(searchedInput.toLowerCase()) ||
+                    user.last_name.toLowerCase().includes(searchedInput.toLowerCase())
+
+                );
+            }));
+
+        }
+
+    }),
+
     actions: {
         selectTeam(team) {
             set(this, 'selectedTeam', team);
         },
-       selectType(type)
-       {
-        set(this, 'selectedType', type);
-       },
+        selectType(type) {
+            set(this, 'selectedType', type);
+        },
 
-       selectOrder(order)
-       {
-        set(this, 'selectedOrder', order);
-       }
+        selectOrder(order) {
+            set(this, 'selectedOrder', order);
+        },
+
+        handleFilterEntry(value) {
+
+            set(this, 'searchedInput', value);
+        }
+
+
 
     }
 
