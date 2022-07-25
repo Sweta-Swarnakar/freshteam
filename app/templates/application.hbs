@@ -1,0 +1,29 @@
+<body>
+
+  <div class="left-nav">
+    <div class="icon-logo-container">
+      {{svg-jar "ft" class="icon-logo"}}
+    </div>
+
+    <div class="emp-logo-container">
+      {{#link-to "users"}}
+        {{svg-jar "candidates" class="emp-logo"}}
+
+      {{/link-to}}
+    </div>
+
+  </div>
+
+  <header class="header">
+    <img class="logo" src="assets/brand-header-logo.png" alt="freshteam logo" />
+    <span class="header-title">Talent Center</span>
+  </header>
+
+  {{outlet}}
+
+  <footer class="footer">
+    <p class="footer-content">
+      HR Software by Freshworks | Knowledge Base
+    </p>
+  </footer>
+</body>
