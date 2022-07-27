@@ -27,17 +27,23 @@
 }
 
 .emp-logo-container {
-  margin: 11px 10px 0 10px;
-}
-
-.emp-logo {
   width: 40px;
   height: 40px;
-
-  fill: $headerBackground;
+  margin: 11px 10px 0 10px;
   background-color: $iconLogoHover;
   border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  
+  svg{
+    width: 33px;
+    height: 20px;
+    fill: $headerBackground;
+  
+  }
 }
+
+
 
 .emp-logo-container:hover {
   background-color: $empLogoHover;

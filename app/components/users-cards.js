@@ -131,10 +131,6 @@ export default Component.extend({
 
     }
 
-
-
-
-
 });
 
 

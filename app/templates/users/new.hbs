@@ -1,0 +1,18 @@
+<div class="slide-add-emp-div">
+
+  <div class="add-user-header">
+    {{#link-to "users"}}
+      <span class="cancel">X</span>
+    {{/link-to}}
+
+    <div class="add-user-title">Add Employee</div>
+    {{#link-to "users" class="reset"}}
+      <span>Cancel</span>
+    {{/link-to}}
+
+    <button class="apply">Apply</button>
+
+  </div>
+   {{#create-user}}{{/create-user}}
+
+</div>

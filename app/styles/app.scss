@@ -1,5 +1,5 @@
 @import "ember-bootstrap/bootstrap";
-@import "app/abstracts/variables.scss";
+@import "app/styles/abstracts/variables.scss";
 
 body {
   min-height: 90vh;
@@ -8,8 +8,8 @@ body {
 }
 
 
-@import "app/layouts/leftnav.scss";
-@import "app/layouts/header.scss";
-@import "app/layouts/usersecheader.scss";
-@import "app/layouts/footer.scss";
-@import "app/pages/users.scss";
+@import "app/styles/layouts/leftnav.scss";
+@import "app/styles/layouts/header.scss";
+@import "app/styles/layouts/footer.scss";
+@import "app/styles/pages/users.scss";
+

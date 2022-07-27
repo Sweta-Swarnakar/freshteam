@@ -1,4 +1,6 @@
 @import "../abstracts/variables.scss";
+@import "app/styles/components/buttons.scss";
+@import "app/styles/components/dropdown.scss";
 .sec-header{
     left: $sideNavWidth;
     right: 0;
@@ -7,14 +9,23 @@
     position: fixed;
     top: 54px;
     z-index: 1;
+    display: flex;
   
   }
 
   .emp-title{
     
     color: $leftNavBg;
-    margin: 8px 0 10px 65px;
+    margin: 17px 0 10px 24px;
     font-weight: 600;
    
   }
+
+
+ 
+  
+  
+
+
+
   
