@@ -1,32 +1,29 @@
-  <div class="add-user-header">
-    {{#link-to "users"}}
-      <span class="cancel">X</span>
-    {{/link-to}}
+<div class="add-user-header">
+  {{#link-to "users"}}
+    <span class="cancel">X</span>
+  {{/link-to}}
 
-    <div class="add-user-title">Add Employee</div>
-    {{#link-to "users" class="reset"}}
-      <span>Cancel</span>
-    {{/link-to}}
+  <div class="add-user-title">Add Employee</div>
+  {{#link-to "users" class="reset"}}
+    <span>Cancel</span>
+  {{/link-to}}
 
-    <button class="apply"  {{action "save" userData}}>Apply</button>
-  </div>
-  
-  <form>
+  <button class="apply" {{action "save" userData}}>Apply</button>
+</div>
 
-    {{#if userData.img_url}}
-      <div class="circle">
-      
-          <img src={{userData.img_url}}>
-      </div> 
-    {{else}}
-        <div class="circle">
-    {{svg-jar "avatar-loading"}}
-    {{input type="file" id="image" value= userData.img_url class="upload"}}
-  </div>
-          
-    {{/if}}
+<form>
 
- 
+  {{#if userData.img_url}}
+    <div class="circle">
+
+      <img src={{userData.img_url}} />
+    </div>
+  {{else}}
+    <div class="circle">
+      {{svg-jar "avatar-loading"}}
+      {{input type="file" id="image" value=userData.img_url class="upload"}}
+    </div>
+  {{/if}}
 
   <div class="add-user-body-div">
     <div>
@@ -46,7 +43,7 @@
         class="user-input"
         id="email"
         required="true"
-        value= userData.email
+        value=userData.email
       }}
 
       <div class="label-tag">Designation</div>
@@ -55,7 +52,7 @@
         class="user-input"
         id="design"
         required="true"
-        value= userData.designation
+        value=userData.designation
       }}
 
     </div>
@@ -68,13 +65,13 @@
         class="user-input"
         id="lastName"
         required="true"
-        value= userData.last_name
+        value=userData.last_name
       }}
 
       <div class="label-tag">Date of joining</div>
       {{bootstrap-datepicker
         class="user-input"
-        value= userData.joiningDate
+        value=userData.joiningDate
         autoclose=true
         calendarWeeks=true
         format="dd.mm.yy"
@@ -82,7 +79,7 @@
       }}
 
       <div class="label-tag">Team</div>
-   
+
       {{#power-select
         class="user-input"
         options=teams
@@ -96,5 +93,3 @@
     </div>
   </div>
 </form>
-   
-
