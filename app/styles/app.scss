@@ -1,5 +1,6 @@
 @import "ember-bootstrap/bootstrap";
 @import "app/styles/abstracts/variables.scss";
+@import 'ember-power-select';
 
 body {
   min-height: 90vh;

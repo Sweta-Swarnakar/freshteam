@@ -1,6 +1,7 @@
 @import "app/styles/abstracts/variables.scss";
 @import "app/styles/components/buttons.scss";
 
+
 .slide-add-emp-div {
   width: 784px;
   z-index: 2;
@@ -11,6 +12,12 @@
   margin: auto;
   box-shadow: 0px 2px 20px $slideBoxShadow;
   background: $headerBackground;
+  -webkit-animation-name: animateright;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animateright;
+    animation-duration: 0.5s
+ 
+ 
 }
 
 .add-user-header {
@@ -132,21 +139,9 @@ color: $filterText;
     filter: alpha(opacity=0);
 }
 
-.modal.open {
-    transform: translateX(0px);
-  }
-  .modal {
-    transition: transform 1s linear;
-    transform: translateX(100%);
-    position: fixed;
-    z-index: 1;
-  
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-    background-color: $footerBg;
+  #ember-basic-dropdown-wormhole{
+    z-index: 5;
+    border: 1px solid black
   }
 
 
