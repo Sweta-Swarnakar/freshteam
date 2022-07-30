@@ -1,6 +1,6 @@
 /* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 import Component from '@ember/component';
-import {set} from '@ember/object';
+import { set, get } from '@ember/object';
 
 export default Component.extend({
 
@@ -13,20 +13,31 @@ export default Component.extend({
   actions:
   {
     chooseTeam(team) {
+      set(this, 'userData.team', team);
+    },
 
-      set(this,'selectedTeam', team);
+    setAvatar() {
+      
+      const files = document.querySelector(".upload").files;
+         if (!files || files.length==0)
+              return;
+         const file = files[0];
+         const reader = new FileReader();
+         reader.readAsDataURL(file);
+         reader.onload = () => {
+               document.querySelector(".avatar").src = reader.result;      
+         };
+    },
+
+    save(userData) {
+
+      userData.save();
 
     },
 
-      save(userData) {
+  }
 
-        userData.save();
-        
-      },
-     
-    }
 
-  
 
 });
 
