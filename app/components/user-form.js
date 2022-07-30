@@ -16,28 +16,35 @@ export default Component.extend({
       set(this, 'userData.team', team);
     },
 
-    setAvatar() {
-       var image = document.querySelector(".upload").files[0];
-        var img = "x";
-      if(!image)
-      {
-        return
-      }
-      else{
-        var reader = new FileReader();
+    setAvatar(avatar) {
 
-        reader.onload = function (e) {
-            var showImage = document.querySelector(".choose-avatar")
-            showImage.src = e.target.result;
+      var input = document.querySelector(".upload").files[0];
+      var path = (window.URL || window.webkitURL).createObjectURL(input);
+      
+    
+      //  var image = document.querySelector(".upload").files[0];
+        
+      // if(!image)
+      // {
+      //   return
+      // }
+      // else{
+      //   var reader = new FileReader();
+
+      //   reader.onload = function (e) {
+      //       var showImage = document.querySelector(".choose-avatar")
+      //       showImage.src = e.target.result;
             
-           img = reader.result.replace('data:', '').replace(/^.+,/, '');
-      }
+          
+      // }
      
-      set(this, "userData.img_url", img);
+      // set(this, "userData.img_url", image);
+
+      set(this, "userData.img_url", path)
   }
 
-  reader.readAsDataURL(image);
-    },
+
+    ,
 
     save(userData) {
 
