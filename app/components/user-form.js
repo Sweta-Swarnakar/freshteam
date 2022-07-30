@@ -17,21 +17,32 @@ export default Component.extend({
     },
 
     setAvatar() {
-      
-      const files = document.querySelector(".upload").files;
-         if (!files || files.length==0)
-              return;
-         const file = files[0];
-         const reader = new FileReader();
-         reader.readAsDataURL(file);
-         reader.onload = () => {
-               document.querySelector(".avatar").src = reader.result;      
-         };
+       var image = document.querySelector(".upload").files[0];
+        var img = "x";
+      if(!image)
+      {
+        return
+      }
+      else{
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            var showImage = document.querySelector(".choose-avatar")
+            showImage.src = e.target.result;
+            
+           img = reader.result.replace('data:', '').replace(/^.+,/, '');
+      }
+     
+      set(this, "userData.img_url", img);
+  }
+
+  reader.readAsDataURL(image);
     },
 
     save(userData) {
 
       userData.save();
+      window.alert("User added succesfully");
 
     },
 
