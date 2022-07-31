@@ -69,24 +69,33 @@
       }}
 
       <div class="label-tag">Date of joining</div>
-      {{bootstrap-datepicker
+    {{bootstrap-datepicker
         class="user-input"
         value=userData.joiningDate
         autoclose=true
         calendarWeeks=true
         format="dd.mm.yy"
-        keyboardNavigation=true
-      }}
+        keyboardNavigation= true
+        id="date"
+      }} 
+
+       
 
       <div class="label-tag">Team</div>
-
+      {{svg-jar "search" class="search-icon"}}
       {{#power-select
-        class="user-input"
+        id="select"
+        triggerClass="user-input"
         options=teams
         selected= userData.team
         onchange=(action "chooseTeam")
         as |name|
+        
       }}
+       {{#if (equal-helper userData.team name)}}
+              {{svg-jar "checkbox"}}
+              {{class="active-bg"}}
+            {{/if}}
         {{name}}
       {{/power-select}}
 

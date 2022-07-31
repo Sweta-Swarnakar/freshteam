@@ -1,6 +1,6 @@
 /* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 import Component from '@ember/component';
-import { set, get } from '@ember/object';
+import { set } from '@ember/object';
 
 export default Component.extend({
 
@@ -21,24 +21,6 @@ export default Component.extend({
       var input = document.querySelector(".upload").files[0];
       var path = (window.URL || window.webkitURL).createObjectURL(input);
       
-    
-      //  var image = document.querySelector(".upload").files[0];
-        
-      // if(!image)
-      // {
-      //   return
-      // }
-      // else{
-      //   var reader = new FileReader();
-
-      //   reader.onload = function (e) {
-      //       var showImage = document.querySelector(".choose-avatar")
-      //       showImage.src = e.target.result;
-            
-          
-      // }
-     
-      // set(this, "userData.img_url", image);
 
       set(this, "userData.img_url", path)
   }
