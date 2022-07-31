@@ -84,7 +84,8 @@
       <div class="label-tag">Team</div>
       {{svg-jar "search" class="search-icon"}}
       {{#power-select
-        id="select"
+        
+    
         triggerClass="user-input"
         options=teams
         selected= userData.team
@@ -92,10 +93,10 @@
         as |name|
         
       }}
-       {{#if (equal-helper userData.team name)}}
+       {{!-- {{#if (equal-helper userData.team name)}}
               {{svg-jar "checkbox"}}
-              {{class="active-bg"}}
-            {{/if}}
+              
+            {{/if}} --}}
         {{name}}
       {{/power-select}}
 
