@@ -16,7 +16,7 @@ export default Component.extend({
       set(this, 'userData.team', team);
     },
 
-    setAvatar(avatar) {
+    setAvatar() {
 
       var input = document.querySelector(".upload").files[0];
       var path = (window.URL || window.webkitURL).createObjectURL(input);
