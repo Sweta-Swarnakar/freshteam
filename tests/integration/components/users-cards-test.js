@@ -72,6 +72,14 @@ test("I can view searched cards", async function (assert) {
 
 });
 
+test("I can the users after deleing", async function (assert) {
+
+  this.users = this.server.createList('user', 15);
+  await render(hbs`{{users-cards model=this.users}}`);
+
+  assert.dom(".card").exists({ count: 15 }, 'shows 15 data')
+});
+
 
 
 

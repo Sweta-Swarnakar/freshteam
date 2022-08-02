@@ -33,21 +33,4 @@ module('Integration | Component | user-form', function(hooks) {
     assert.dom(".circle").exists('shows image tag')
 
   });
-
-  // test("I can view 16 users", async function (assert) {
-
-  //   this.users = this.server.createList('user', 15);
-  //   await render(hbs`{{users-cards model=this.users}}`);
-  //   await render(hbs`{{user-form  userData =this.user}}`)
- 
-  //   await typeIn('#firstName', 'Person 15');
-  //   await typeIn('#email', 'Person@');
-  //   await typeIn('#design', 'Frontend');
-  //   await typeIn('#lastName', 'Title 15');
-    
-  //   await click(".apply");
-    
-  
-  //   assert.dom(".card").exists({ count: 16 }, 'shows 16 data')
-  // });
 });

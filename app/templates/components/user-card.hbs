@@ -1,9 +1,7 @@
 <div class="action-icon">
-     {{#link-to "users.edit" user class= user.id }}{{svg-jar "edit"}}{{/link-to}}
-    
-    
-     <img class="del" src="assets/trash (1).jpg"  onclick={{action 'initiateDel'}}/>
-     {{!-- {{svg-jar "trash" onclick="initiateDel"}} --}}
+  {{#link-to "users.edit" user class=user.id}}{{svg-jar "edit"}}{{/link-to}}
+
+  <a onclick={{action "initiateDel"}}> {{svg-jar "trash"}} </a>
 
 </div>
 {{user-avatar user=user}}
@@ -12,8 +10,25 @@
 <p class="email">{{user.email}}</p>
 
 
+
 {{#if this.popUp}}
-  
-  {{del-popup user= user pop=this.popUp}}
+
+  <BsModal @onSubmit={{action "deleteUser" user.id}} as |Modal|>
+    <Modal.header>
+      <h4 class="modal-title"><i class="glyphicon glyphicon-alert"></i>
+        Alert</h4>
+    </Modal.header>
+    <Modal.body>
+      Are you absolutely sure you want to do that???
+    </Modal.body>
+    <Modal.footer as |footer|>
+      <BsButton @onClick={{action Modal.close}}   @onClick={{action "initiateDel"}} @type="danger">Cancel</BsButton>
+      <BsButton
+        @onClick={{action Modal.submit}}
+        
+        @type="success"
+      >Delete</BsButton>
+    </Modal.footer>
+  </BsModal>
 
 {{/if}}
