@@ -21,7 +21,7 @@
   {{else}}
     <div class="circle">
       {{svg-jar "avatar-loading"}}
-      <input class="upload" onchange={{action "setAvatar"}}  type="file"/>
+      <input required class="upload" id="imgFile" onchange={{action "setAvatar"}}  type="file"/>
     </div>
   {{/if}}
 
@@ -82,10 +82,8 @@
        
 
       <div class="label-tag">Team</div>
-      {{svg-jar "search" class="search-icon"}}
+      {{!-- {{svg-jar "search" class="search-icon"}} --}}
       {{#power-select
-        
-    
         triggerClass="user-input"
         options=teams
         selected= userData.team

@@ -1,5 +1,5 @@
- .add-user-button{
-    font-weight: 400;
+.add-user-button {
+  font-weight: 400;
   font-size: 14px;
   position: absolute;
   right: 24px;
@@ -9,15 +9,69 @@
   top: 11px;
   border: 1px solid $footerBorder;
   border-radius: 2px;
-  }
+}
 
-  .apply {
-    margin: 10px 20px;
-    color: $footerBg;
-    background-color: $applyButtonColor;
-    border: 1px solid $filterText;
-    border-radius: 2px;
-    font-weight: 400;
-    font-size: 14px;
-  }
+.apply {
+  margin: 10px 20px;
+  color: $footerBg;
+  background-color: $applyButtonColor;
+  border: 1px solid $filterText;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+}
 
+.action-icon {
+  display: flex;
+
+  svg:nth-child(1) {
+    width: 13px;
+    top: 17px;
+    height: 15px;
+    position: absolute;
+    right: 60px;
+    fill: #12344d;
+  }
+  img:nth-child(2) {
+    width: 13px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    color: #12344d;
+  }
+}
+
+.pop-up {
+ 
+  width: 604px;
+  height: 86px;
+  z-index: 1;
+  top: 50%;
+  left: 40%;
+  background: #ffffff;
+  box-shadow: 0px 2px 20px rgba(24, 50, 71, 0.2);
+  position: fixed;
+  font-weight: 400;
+  font-size: 14px;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.confirm {
+  color: #ffffff;
+  display: inline-block;
+  background-color: #264966;
+  border-radius: 2px;
+  padding: 6px 12px;
+}
+
+.del-buttons {
+  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 34px;
+}

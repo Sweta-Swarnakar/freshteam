@@ -1,4 +1,19 @@
+<div class="action-icon">
+     {{#link-to "users.edit" user class= user.id }}{{svg-jar "edit"}}{{/link-to}}
+    
+    
+     <img class="del" src="assets/trash (1).jpg"  onclick={{action 'initiateDel'}}/>
+     {{!-- {{svg-jar "trash" onclick="initiateDel"}} --}}
+
+</div>
 {{user-avatar user=user}}
 
 <strong class="name">{{user.first_name}} {{user.last_name}}</strong>
 <p class="email">{{user.email}}</p>
+
+
+{{#if this.popUp}}
+  
+  {{del-popup user= user pop=this.popUp}}
+
+{{/if}}
