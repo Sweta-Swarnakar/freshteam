@@ -77,6 +77,8 @@ test("I can the users after deleing", async function (assert) {
   this.users = this.server.createList('user', 15);
   await render(hbs`{{users-cards model=this.users}}`);
 
+  await click("")
+
   assert.dom(".card").exists({ count: 15 }, 'shows 15 data')
 });
 
