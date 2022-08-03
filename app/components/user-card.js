@@ -8,27 +8,42 @@ export default Ember.Component.extend({
     popUp: false,
     store: Ember.inject.service(),
 
+
+
     actions: {
 
         initiateDel() {
-            if(this.popUp == false)
-            set(this, 'popUp', true);
-            else{
+            if (this.popUp == false)
+                set(this, 'popUp', true);
+            else {
                 set(this, 'popUp', false);
             }
         },
 
-        deleteUser(id) {
-            get(this, "store").findRecord('user', id, { backgroundReload: false }).then((user) => {
+        async deleteUser(id) {
+            set(this, "id", id);
 
-                user.deleteRecord();
-                user.get('isDeleted');
-                user.save();
-                set(this, 'popUp', false);
-                window.location.reload();
-            }, (error) => {
+            try {
+
+                await get(this, "store").findRecord('user', id, { backgroundReload: false }).then((user) => {
+
+                    user.deleteRecord();
+                    user.save();
+                  
+                },
+                    (error) => {
+                        console.log(error);
+                    })
+    
+               
+            } catch (error) {
                 console.log(error);
-            })
+                
+            }
+            
+            set(this, 'popUp', false);
+            set(this, "isDeleted", true);
+
         }
     }
 });

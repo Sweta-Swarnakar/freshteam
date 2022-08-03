@@ -1,7 +1,7 @@
 <div class="action-icon">
   {{#link-to "users.edit" user class=user.id}}{{svg-jar "edit"}}{{/link-to}}
 
-  <a onclick={{action "initiateDel"}}> {{svg-jar "trash"}} </a>
+  <a class="init-del" onclick={{action "initiateDel"}}> {{svg-jar "trash"}} </a>
 
 </div>
 {{user-avatar user=user}}
@@ -23,11 +23,7 @@
     </Modal.body>
     <Modal.footer as |footer|>
       <BsButton @onClick={{action Modal.close}}   @onClick={{action "initiateDel"}} @type="danger">Cancel</BsButton>
-      <BsButton
-        @onClick={{action Modal.submit}}
-        
-        @type="success"
-      >Delete</BsButton>
+      <BsButton class="del-confirm" @onClick={{action Modal.submit}} @type="success">Delete</BsButton>
     </Modal.footer>
   </BsModal>
 

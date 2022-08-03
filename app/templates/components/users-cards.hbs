@@ -82,11 +82,11 @@
 
 {{!-- {{log 'searched array:' this.searchedArray}} --}}
 
-{{#if this.searchedArray}}
+{{#if this.activeUsers}}
   <div class="found-card-container">
-    {{#each this.searchedArray as |user|}}
+    {{#each this.activeUsers as |user|}}
 
-      {{#user-card user=user}}{{/user-card}}
+      {{#user-card user=user isdeleted = this.isdeleted}}{{/user-card}}
 
     {{/each}}
   </div>
