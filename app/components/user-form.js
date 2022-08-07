@@ -9,6 +9,7 @@ export default Component.extend({
   teams: ['Freshteam', 'Freshdesk', 'Freshservice'],
   selectedTeam: 'Freshteam',
 
+
   converImageToBase64() {
     let image = document.querySelector(".upload").files[0];
 
@@ -31,7 +32,6 @@ export default Component.extend({
     chooseTeam(team) {
       set(this, 'userData.team', team);
     },
-
     setAvatar() {
 
       get(this, 'converImageToBase64')().then((result) => {
@@ -44,11 +44,29 @@ export default Component.extend({
 
     save(userData) {
 
-      userData.save();
-      window.alert("User added succesfully");
-     
+      
+      userData.validate()
+        .then(({ validations, }) => {
+          if (validations.get('isValid')) {
+            userData.save()
+              //       window.alert("User added succesfully")
+              .then(() => this.set('showSaved', true));
+          }
+        })
 
     },
+
+    discardJunk(userData) {
+
+      if (userData.isNew == false && userData.hasDirtyAttributes == true) {
+        userData.rollbackAttributes()
+      }
+      else {
+        userData.deleteRecord();
+      }
+
+
+    }
 
   }
 });

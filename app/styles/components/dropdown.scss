@@ -1,62 +1,65 @@
-
 .browse {
-    margin-top: 16px;
-    color: $browseText;
-    font-weight: lighter;
+  margin-top: 16px;
+  color: $browseText;
+  font-weight: lighter;
+}
+
+.dropdown a {
+
+  width: fit-content;
+  color: $filterText;
+  padding-left: 4px;
+}
+
+.dropdown {
+  padding-top: 16px;
+}
+
+.dropdown-menu {
+  width: 212px;
+  font-weight: lighter;
+  border-radius: 4px;
+  box-shadow: 0px 2px 10px $dropdownMenuShadow;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  height: 30px;
+  justify-content: center;
+  padding-left: 10px;
+  position: relative;
+
+}
+
+.dropdown-menu li:hover {
+  background-color: $dropdownMenuHoverBg;
+}
+
+.active-bg {
+
+  font-weight: 600;
+
+  svg {
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+
   }
-  
-  .dropdown a {
-    
-    width: fit-content;
-    color: $filterText;
-    padding-left: 4px;
-  }
-  
-  .dropdown{
-    padding-top: 16px;
-  }
-  .dropdown-menu {
-    width: 212px;
-    font-weight: lighter;
-    border-radius: 4px;
-    box-shadow: 0px 2px 10px $dropdownMenuShadow;
-    padding: 10px;
-    padding-bottom: 0;
-  }
-  .dropdown-menu ul{
-    list-style-type: none;
-    padding: 0;
-  }
-  .dropdown-menu ul li {
-    height: 30px;
-    justify-content: center;
-    padding-left: 10px;
-    position: relative;
-    
-  }
-  
-  .dropdown-menu li:hover {
-    background-color: $dropdownMenuHoverBg;
-  }
-  
-  .active-bg {
-   
-    font-weight: 600;
-    svg {
-      width: 10px;
-      height: 20px;
-      position: absolute;
-      right: 12px;
-      top: 5px;
-     
-    }
-    
-  }
-  
-  .sort{
-    color: $browseText;
-    font-weight: lighter;
-     margin-left: 79px;
-     margin-top: 16px;
-    
-  }
+
+}
+
+.sort {
+  color: $browseText;
+  font-weight: lighter;
+  margin-left: 79px;
+  margin-top: 16px;
+
+}

@@ -23,21 +23,40 @@
 
 .action-icon {
   display: flex;
+  
 
-  svg:nth-child(1) {
+  .edit {
     width: 13px;
     top: 17px;
     height: 15px;
     position: absolute;
-    
-    fill: #12344d;
+    right: 42px;
+    fill: $leftNavBg;
   }
-  a:nth-child(2) {
+  .trash{
     width: 13px;
     height: 15px;
     position: absolute;
-    top: 0;
-    right: 16px;
-    color: #12344d;
+    top: 17px;
+    right: 24px;
+    fill:  $leftNavBg;
   }
+}
+
+.btn-danger{
+  background-color: $headerBackground;
+  border-color: $headerBackground;
+  color: $leftNavBg;
+  cursor: pointer;
+}
+
+.btn-danger:hover{
+  background-color: $headerBackground;
+  border-color: $headerBackground;
+  color: $leftNavBg;
+}
+
+.del-confirm{
+  position: relative;
+  right: 20px;
 }

@@ -8,8 +8,8 @@
   margin-top: 108px;
   margin-left: 60px;
   padding: 0 24px;
-  
-  
+
+
 
 }
 
@@ -28,16 +28,16 @@
   grid-gap: 18px;
   grid-template-columns: repeat(5, 1fr);
   margin-right: 24px;
-  
-  
+
+
 }
 
-.not-found-card-container{
+.not-found-card-container {
   width: 100%;
   text-align: center;
   justify-content: center;
-  padding-top: 202px; 
-  
+  padding-top: 202px;
+
 }
 
 .card {
@@ -64,7 +64,7 @@
   text-align: center;
   justify-content: center;
 
-  
+
 }
 
 .avatar {
@@ -79,11 +79,11 @@
   width: 400px;
   top: 11px;
   border: 1px solid $searchBorder;
-border-radius: 2px;
-padding-left: 30px;
+  border-radius: 2px;
+  padding-left: 30px;
 }
 
-.search-icon{
+.search-icon {
   position: absolute;
   top: 18px;
   z-index: 1;
@@ -92,43 +92,66 @@ padding-left: 30px;
   width: 13px;
   height: 13px;
 }
-.active-bg{
+
+.active-bg {
   background-color: $selectedActiveBg;
 }
 
-.name{
+.name {
   font-weight: 600;
   font-size: 14px;
 }
-.email{
+
+.email {
   font-size: 12px;
   color: $nameColor;
 }
 
-.not-found-text-1{
+.not-found-text-1 {
   font-weight: 600;
   font-size: 16px;
   color: $notFoundText1Color;
 }
 
-.not-found-text-2{
+.not-found-text-2 {
   font-weight: 400;
   font-size: 14px;
   color: $notFoundText1Color;
 }
 
-.not-found-icon{
+.not-found-icon {
   width: 93px;
   height: 75px;
   opacity: 0.5;
 }
 
-.tick-round{
-  fill:  #E86F25;
-  // padding-right: 10px;       
+.tick-round {
+  fill: $tickRound;
+  width: 30px;
+  height: 30px;
 }
 
 
+.popup-body {
+  font-weight: 400;
+  font-size: 14px;
+  color: #12344D;
+  display: flex;
+  width: 604px;
+  height: 84px;
 
 
+  span:nth-child(1) {
+    width: 310px;
 
+  }
+
+  div:nth-child(1) {
+    padding-left: 24px;
+  }
+
+}
+
+.error{
+  color: red;
+}

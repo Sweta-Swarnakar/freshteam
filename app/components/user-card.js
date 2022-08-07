@@ -1,15 +1,24 @@
 /* eslint-disable no-console */
 //import Component from '@ember/component';
-import { set, get } from '@ember/object';
+import { set, get, computed} from '@ember/object';
 import Ember from 'ember';
+import { inject } from '@ember/service';
 
+// eslint-disable-next-line ember/new-module-imports
 export default Ember.Component.extend({
     classNames: ['card'],
+    attributeBindings: ["data-test-id"],
     popUp: false,
-    store: Ember.inject.service(),
+    store: inject(),
 
+    'data-test-id': computed('user', function(){
+        
+       
+        return get(this, 'user.id');
 
-
+        
+    }),
+ 
     actions: {
 
         initiateDel() {
@@ -20,29 +29,10 @@ export default Ember.Component.extend({
             }
         },
 
-        async deleteUser(id) {
-            set(this, "id", id);
-
-            try {
-
-                await get(this, "store").findRecord('user', id, { backgroundReload: false }).then((user) => {
-
-                    user.deleteRecord();
-                    user.save();
-                  
-                },
-                    (error) => {
-                        console.log(error);
-                    })
-    
-               
-            } catch (error) {
-                console.log(error);
-                
-            }
-            
+        deleteUser(user) {
+            user.deleteRecord();
+            user.save();
             set(this, 'popUp', false);
-            set(this, "isDeleted", true);
 
         }
     }

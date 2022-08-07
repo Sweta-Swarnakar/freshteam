@@ -10,7 +10,7 @@ export default Component.extend({
 
     selectedType: "first_name",
     value: '',
-    isDeleted: false,
+  
 
   
 
@@ -111,22 +111,17 @@ export default Component.extend({
 
     }),
 
-    activeUsers: computed('searchedArray.[]','isDeleted',function(){
-        let isDel = get(this, "isDeleted");
-        let searchedArray = get(this, "searchedArray");
-        let id = get(this, "id")
+    validUsers: computed('searchedArray.[]', function(){
+        let searchedArray = get(this, 'searchedArray');
 
-        if(isDel == true)
-        {
-            return searchedArray.filter((el) => {
-                return el.id != id;
-            })
-        }
-        else{
+        return searchedArray.filter((el) => {
+            return el.id != "";
+        })
 
-            return searchedArray;
-        }
+        
     }),
+
+    
 
     actions: {
         selectTeam(team) {

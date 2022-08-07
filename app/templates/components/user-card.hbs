@@ -1,7 +1,7 @@
 <div class="action-icon">
-  {{#link-to "users.edit" user class=user.id}}{{svg-jar "edit"}}{{/link-to}}
+  {{#link-to "users.edit" user class=user.id}}{{svg-jar "edit" class="edit"}}{{/link-to}}
 
-  <a class="init-del" onclick={{action "initiateDel"}}> {{svg-jar "trash"}} </a>
+  <a class="init-del" onclick={{action "initiateDel"}}> {{svg-jar "trash"  class="trash"}} </a>
 
 </div>
 {{user-avatar user=user}}
@@ -13,18 +13,22 @@
 
 {{#if this.popUp}}
 
-  <BsModal @onSubmit={{action "deleteUser" user.id}} as |Modal|>
-    <Modal.header>
-      <h4 class="modal-title"><i class="glyphicon glyphicon-alert"></i>
-        Alert</h4>
-    </Modal.header>
-    <Modal.body>
-      Are you absolutely sure you want to do that???
+  <BsModal @onSubmit={{action "deleteUser" user}} as |Modal|>
+   
+    <Modal.body class="popup-body">
+      <span>
+          {{svg-jar "tick-round" class="tick-round"}}
+      Do you wish to remove this employee from
+     <div style="padding-left: 34px;">freshteam</div>
+      </span>
+
+      <div>
+           <BsButton class="stop-del" @onClick={{action Modal.close}}   @onClick={{action "initiateDel"}} @type="danger">Cancel</BsButton>
+      <BsButton class="del-confirm apply" @onClick={{action Modal.submit}} @type="success">Delete</BsButton>
+      </div> 
+    
     </Modal.body>
-    <Modal.footer as |footer|>
-      <BsButton @onClick={{action Modal.close}}   @onClick={{action "initiateDel"}} @type="danger">Cancel</BsButton>
-      <BsButton class="del-confirm" @onClick={{action Modal.submit}} @type="success">Delete</BsButton>
-    </Modal.footer>
+   
   </BsModal>
 
 {{/if}}

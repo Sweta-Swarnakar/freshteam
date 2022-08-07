@@ -12,8 +12,8 @@
   margin: auto;
   box-shadow: 0px 2px 20px $slideBoxShadow;
   background: $headerBackground;
- 
- 
+
+
 }
 
 .add-user-header {
@@ -24,29 +24,29 @@
   box-shadow: 0px 1px 0px $searchBorder;
 }
 
-.cancel{
-    position: absolute;
-     height: 50px;
-     top: 0;
-     width: 45px;
-     left: -45px;
-     background: $filterText;
-     color: $footerBg;
-     font-size: 14px;
-     text-align: center;
-     line-height: 50px;
+.cancel {
+  position: absolute;
+  height: 50px;
+  top: 0;
+  width: 45px;
+  left: -45px;
+  background: $filterText;
+  color: $footerBg;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
 
 }
 
 .add-user-body-div {
   display: flex;
   padding: 19px 24px;
- 
+
 }
 
-.add-user-body-div > div{
-    width: 50%;
-    overflow-wrap: break-word;
+.add-user-body-div>div {
+  width: 50%;
+  overflow-wrap: break-word;
 }
 
 .label-tag {
@@ -66,10 +66,11 @@
   color: $filterText;
 }
 
-.reset:hover{
-    text-decoration: none;
-    color: $filterText;
+.reset:hover {
+  text-decoration: none;
+  color: $filterText;
 }
+
 .add-user-title {
   font-weight: 600;
   font-size: 16px;
@@ -87,77 +88,56 @@
   border-radius: 4px;
   padding: 6px 12px;
   font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-color: $filterText;
+  font-size: 14px;
+  line-height: 20px;
+  color: $filterText;
 }
 
-.user-input:hover{
-    border: 1px solid $notFoundText1Color;
+.user-input:hover {
+  border: 1px solid $notFoundText1Color;
 }
 
-.user-input:focus{
-    border: 2px solid $userInputFocus;
-}
-
-.circle{
-    width: 90px;
-    height: 92px;
-    border-radius: 50%;
-    background-color: $circleBg;
-   text-align: center;
-   margin: 26px 670px 16px 24px;
-    svg{
-        fill: $footerBg;
-        width: 60%;
-        margin-top: 15px;
-
-    }
-}
-
-.choose-avatar{
-  width:  100%;
-  height: 100%;
-  border-radius: 50%;
-  
+.user-input:focus {
+  border: 2px solid $userInputFocus;
 }
 
 .circle {
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-    margin-left: 24px;
+  width: 90px;
+  height: 92px;
+  border-radius: 50%;
+  background-color: $circleBg;
+  text-align: center;
+  margin: 26px 670px 16px 24px;
+
+  svg {
+    fill: $footerBg;
+    width: 60%;
+    margin-top: 15px;
+
+  }
+}
+
+.choose-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+}
+
+.circle {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  margin-left: 24px;
 }
 
 .circle input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    font-size: 80px;
-    cursor: pointer;
-    
-    filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-size: 80px;
+  cursor: pointer;
+
+  filter: alpha(opacity=0);
 }
-
-
-// .slide-add-emp-div.open {
-//   transform: translateX(0px);
-// }
-// .slide-add-emp-div {
-//   transition: transform 1s linear;
-//   transform: translateX(100%);
-//   position: fixed;
-//   z-index: 1;
-
-//   right: 0;
-//   top: 0;
-//   width: 50%;
-//   height: 100%;
-//   overflow: auto;
-//   background-color: white;
-// }
-  
-
-
-  
