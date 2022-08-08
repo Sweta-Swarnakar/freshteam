@@ -1,0 +1,105 @@
+<div class="add-user-header">
+  {{#link-to "users"}}
+    <span class="cancel">X</span>
+  {{/link-to}}
+
+  <div class="add-user-title">Add Employee</div>
+  {{#link-to "users" class="reset"}}
+    <span>Cancel</span>
+  {{/link-to}}
+
+  <button class="apply" {{action "save" userData}}>Apply</button>
+</div>
+
+<form>
+
+
+  {{#if userData.img_url}}
+    <div class="circle">
+       <img class="choose-avatar" src="{{userData.img_url}}"/>
+    </div>
+  {{else}}
+    <div class="circle">
+      {{svg-jar "avatar-loading"}}
+      <input class="upload" onchange={{action "setAvatar"}}  type="file"/>
+    </div>
+  {{/if}}
+
+  <div class="add-user-body-div">
+    <div>
+
+      <div class="label-tag important">First Name</div>
+      {{input
+        type="text"
+        class="user-input"
+        id="firstName"
+        required="true"
+        value=userData.first_name
+      }}
+
+      <div class="label-tag important">Email</div>
+      {{input
+        type="text"
+        class="user-input"
+        id="email"
+        required="true"
+        value=userData.email
+      }}
+
+      <div class="label-tag">Designation</div>
+      {{input
+        type="text"
+        class="user-input"
+        id="design"
+        required="true"
+        value=userData.designation
+      }}
+
+    </div>
+
+    <div>
+
+      <div class="label-tag important">Last Name</div>
+      {{input
+        type="text"
+        class="user-input"
+        id="lastName"
+        required="true"
+        value=userData.last_name
+      }}
+
+      <div class="label-tag">Date of joining</div>
+    {{bootstrap-datepicker
+        class="user-input"
+        value=userData.joiningDate
+        autoclose=true
+        calendarWeeks=true
+        format="dd.mm.yy"
+        keyboardNavigation= true
+        id="date"
+      }} 
+
+       
+
+      <div class="label-tag">Team</div>
+      {{svg-jar "search" class="search-icon"}}
+      {{#power-select
+        
+    
+        triggerClass="user-input"
+        options=teams
+        selected= userData.team
+        onchange=(action "chooseTeam")
+        as |name|
+        
+      }}
+       {{!-- {{#if (equal-helper userData.team name)}}
+              {{svg-jar "checkbox"}}
+              
+            {{/if}} --}}
+        {{name}}
+      {{/power-select}}
+
+    </div>
+  </div>
+</form>

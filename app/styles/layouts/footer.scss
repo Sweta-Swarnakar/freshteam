@@ -1,0 +1,21 @@
+@import "../abstracts/variables.scss";
+.footer {
+
+    left: $sideNavWidth;
+    height: 28px;
+    background: $footerBg; 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid $footerBorder;
+    
+  }
+  
+  .footer-content{
+    font-size: 12px;
+   justify-content: center;
+   text-align: center;
+  color: $footerTextColor;
+  padding-top: 5px;
+  }
+  
