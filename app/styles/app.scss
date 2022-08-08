@@ -6,6 +6,7 @@ body {
   min-height: 90vh;
   position: relative;
   background: $bodyBackground;
+  
 }
 
 
@@ -13,3 +14,4 @@ body {
 @import "app/styles/layouts/header.scss";
 @import "app/styles/layouts/footer.scss";
 @import "app/styles/pages/users.scss";
+@import "app/styles/pages/listview.scss";

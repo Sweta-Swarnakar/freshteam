@@ -1,24 +1,33 @@
 /* eslint-disable no-console */
 //import Component from '@ember/component';
-import { set, get, computed } from '@ember/object';
+import { set, get, computed} from '@ember/object';
 import Ember from 'ember';
 import { inject } from '@ember/service';
 
 // eslint-disable-next-line ember/new-module-imports
 export default Ember.Component.extend({
-    classNames: ['card'],
-    attributeBindings: ["data-test-id"],
+  
     popUp: false,
     store: inject(),
 
-    'data-test-id': computed('user', function () {
-
-
-        return get(this, 'user.id');
-
-
-    }),
-
+    randomColor: computed(function(){
+      
+        var colors = ['red', 'green', 'blue', 'orange', 'yellow', 'purple', 'violet', 'pink', 'coral'];
+    
+        return `${colors[Math.floor(Math.random() * colors.length)]}`
+    
+      }),
+      
+     firstChar: computed('user', function()
+     {
+        let users = this.user;
+         return users.first_name[0];
+     }),
+      
+    
+  
+    
+ 
     actions: {
 
         initiateDel() {
@@ -37,3 +46,4 @@ export default Ember.Component.extend({
         }
     }
 });
+

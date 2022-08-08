@@ -141,3 +141,56 @@
 
   filter: alpha(opacity=0);
 }
+
+.on-focus:hover {
+  border: 1px solid #475867;
+  box-shadow: inset 0px 1px 2px rgba(24, 50, 71, 0.05);
+  border-radius: 4px;
+  cursor: default;
+}
+
+
+
+
+
+.date-div{
+
+  .datepicker {
+    width: 360px;
+    border-radius: 4px;
+    .table-condensed {
+        width: 100%;
+    }
+  }
+
+}
+
+.ember-application>.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active.disabled:hover[disabled] {
+  background-color: #7052CC;
+  border-radius: 4px;
+}
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover {
+  background-image: none;
+}

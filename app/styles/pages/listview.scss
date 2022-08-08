@@ -1,0 +1,118 @@
+.list-content {
+
+  display: flex;
+  color: white;
+  box-shadow: 0px 1px 0px #DBDFE3;
+  width: 1684px;
+  background: #3EC5D1;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 84px;
+  padding: 11px 0 11px 28px;
+  line-height: 10px;
+
+}
+
+.table-header {
+  padding-right: 350px;
+}
+
+.table-header:nth-child(2) {
+  padding-right: 380px;
+}
+
+.row {
+  width: 1684px;
+  margin-top: 10px;
+  height: 66px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 84px;
+  background: #FFFFFF;
+  border-radius: 5px;
+
+}
+
+.title-div {
+  color: #0070D0;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.col {
+  width: 300px;
+  padding: 17px 28px;
+
+}
+
+.ellipsis {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 20px;
+  font-weight: 600;
+
+}
+
+.small-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.name-img-container {
+  display: flex;
+
+}
+
+
+
+.col:last-child {
+  text-align: right;
+}
+
+.mail-icon {
+  width: 12px;
+  height: 9px;
+}
+
+.design {
+  color: #79888E;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 18px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+
+}
+.dropdown-action{
+  
+  .dropdown-menu {
+    width: 186px;
+    
+    margin-right: 50px;
+    margin-top: 10px;
+    color: black;
+  }
+
+}
+
+
+.small-circle-div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+
+  .card-text {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    margin: 7px;
+
+  }
+}

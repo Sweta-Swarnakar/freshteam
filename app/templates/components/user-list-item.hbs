@@ -1,0 +1,70 @@
+{{yield}}
+<tr class="row">
+  <td class="col">
+    <div class="name-img-container">
+      <div>
+            {{user-avatar user=user class="small-circle-div"}}
+      </div>
+   
+      <div>
+        <div class="title-div">{{user.first_name}} {{user.last_name}}</div>
+        <div class="design">{{user.designation}}</div>
+      </div>
+
+    </div>
+  </td>
+
+  <td class="col">
+
+    <div class="sec-td">
+      {{svg-jar "email" class="mail-icon"}}
+      <span>{{user.email}}</span>
+
+    </div>
+  </td>
+
+  <td class="col">
+
+    {{user.team}}
+  </td>
+
+  <td class="col">
+
+<div class="dropdown-action">
+  <BsDropdown  as |dd| >
+      <dd.toggle> {{svg-jar "ellipsis-v" class="ellipsis"}}</dd.toggle>
+      <dd.menu as |ddm|>
+        {{#link-to "users-listview.edit" user class=user.id}}<li>Edit</li>{{/link-to}}
+
+        <li onclick={{action "initiateDel" }}>Delete</li>
+      </dd.menu>
+    </BsDropdown>
+
+</div>
+    
+  </td>
+</tr>
+
+
+{{#if this.popUp}}
+
+<BsModal @onSubmit={{action "deleteUser" user}} as |Modal|>
+
+  <Modal.body class="popup-body">
+    <span>
+      {{svg-jar "tick-round" class="tick-round"}}
+      Do you wish to remove this employee from
+      <div style="padding-left: 34px;">freshteam</div>
+    </span>
+
+    <div>
+      <BsButton class="stop-del" @onClick={{action Modal.close}} @onClick={{action "initiateDel" }} @type="danger">
+        Cancel</BsButton>
+      <BsButton class="del-confirm apply" @onClick={{action Modal.submit}} @type="success">Delete</BsButton>
+    </div>
+
+  </Modal.body>
+
+</BsModal>
+
+{{/if}}

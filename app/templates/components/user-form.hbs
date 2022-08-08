@@ -1,15 +1,39 @@
 <div class="add-user-header">
+
+
+  {{#if val}}
+  {{log "ans" val}}
   {{#link-to "users"}}
   <span class="cancel" onclick={{action "discardJunk" userData}}>X</span>
   {{/link-to}}
 
+  {{else}}
+  {{#link-to "users-listview"}}
+  <span class="cancel" onclick={{action "discardJunk" userData}}>X</span>
+  {{/link-to}}
+  {{/if}}
+
   <div class="add-user-title">Add Employee</div>
+
+  {{#if val}}
   {{#link-to "users" class="reset"}}
   <span onclick={{action "discardJunk" userData}}>Cancel</span>
   {{/link-to}}
+  {{else}}
+  {{#link-to "users-listview" class="reset"}}
+  <span onclick={{action "discardJunk" userData}}>Cancel</span>
+  {{/link-to}}
+  {{/if}}
+
+  {{#if val}}
   {{#link-to "users"}}
   <button class="apply" {{action "save" userData}}>Apply</button>
   {{/link-to}}
+  {{else}}
+  {{#link-to "users-listview"}}
+  <button class="apply" {{action "save" userData}}>Apply</button>
+  {{/link-to}}
+  {{/if}}
 
 </div>
 
@@ -100,25 +124,29 @@
       </div>
       {{/if}}
 
-      <div class="label-tag">Date of joining</div>
-      {{bootstrap-datepicker
-      class="user-input"
-      value=userData.joiningDate
-      autoclose=true
-      format="dd.mm.yy"
-      id="date"
-      focus-out=(action (mut showJoiningDateError) true)
-      }}
-      {{#if showJoiningDateError}}
-      <div class="error">
-        {{v-get userData 'joiningDate' 'message'}}
+      <div class="date-div">
 
+
+        <div class="label-tag">Date of joining</div>
+        {{bootstrap-datepicker
+        class="user-input on-focus"
+
+        value=userData.joiningDate
+        autoclose=true
+        format="dd/mm/yyyy"
+        id="date"
+        focus-out=(action (mut showJoiningDateError) true)
+        }}
+        {{#if showJoiningDateError}}
+        <div class="error">
+          {{v-get userData 'joiningDate' 'message'}}
+
+        </div>
+        {{/if}}
       </div>
-      {{/if}}
-
 
       <div class="label-tag">Team</div>
-      {{svg-jar "search" class="search-icon"}}
+      {{!-- {{svg-jar "search" class="search-icon"}} --}}
 
       {{#power-select
 
@@ -130,10 +158,10 @@
       as |name|
 
       }}
-      {{#if (equal-helper userData.team name)}}
+      {{!-- {{#if (equal-helper userData.team name)}}
       {{svg-jar "checkbox"}}
 
-      {{/if}}
+      {{/if}} --}}
       {{name}}
       {{/power-select}}
 

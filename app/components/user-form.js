@@ -3,11 +3,14 @@
 import Component from '@ember/component';
 import { set, get } from '@ember/object';
 
+
 export default Component.extend({
 
   classNames: ["slide-add-emp-div"],
   teams: ['Freshteam', 'Freshdesk', 'Freshservice'],
   selectedTeam: 'Freshteam',
+
+
 
 
   converImageToBase64() {
@@ -44,7 +47,7 @@ export default Component.extend({
 
     save(userData) {
 
-      
+
       userData.validate()
         .then(({ validations, }) => {
           if (validations.get('isValid')) {

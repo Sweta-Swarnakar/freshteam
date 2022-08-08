@@ -1,12 +1,13 @@
 <div class="sec-header">
   <p class="emp-title">Employees</p>
- {{#link-to "users.new" }}<button class="add-user-button">Add Employees</button>{{/link-to}}
+ {{#link-to "users.new" (query-params isUserRoute="true") }}<button class="add-user-button">Add Employees</button>{{/link-to}}
 </div> 
-{{!-- {{#user-filter users=model as |filteredUsers|}}
- 
-{{/user-filter}} --}}
- {{users-cards model=model}}
+{{#user-filtering model = model as |users| }}
+ {{users-cards users = users}}
+{{/user-filtering}} 
 {{outlet}}
+
+
    
 
     

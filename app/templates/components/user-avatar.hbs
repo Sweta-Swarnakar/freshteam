@@ -1,11 +1,10 @@
 {{#if user.img_url}}
 
-  <div class="circle-div">
-    <img class="avatar" data-test-id="user-avatar" src="{{user.img_url}}" />
-  </div>
+  <img class="avatar" data-test-id="user-avatar" src="{{user.img_url}}" />
+  
 {{else}}
 
-  <div class="circle-div"  data-test-id="no-user-avatar" style="background-color:{{this.randomColor}}">
+  <div  data-test-id="no-user-avatar" style="border-radius:50%; background-color:{{this.randomColor}}">
     <span class="card-text">
         {{this.firstChar}}
     </span>

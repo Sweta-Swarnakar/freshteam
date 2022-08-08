@@ -5,7 +5,7 @@ import { computed } from '@ember/object';
 
 export default Component.extend({
 
-   classNames: ['circle-div'],
+  
 
   randomColor: computed(function(){
       

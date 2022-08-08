@@ -4,12 +4,10 @@
   <a class="init-del" onclick={{action "initiateDel"}}> {{svg-jar "trash"  class="trash"}} </a>
 
 </div>
-{{user-avatar user=user}}
+{{user-avatar user=user class= 'circle-div'}}
 
 <strong class="name">{{user.first_name}} {{user.last_name}}</strong>
 <p class="email">{{user.email}}</p>
-
-
 
 {{#if this.popUp}}
 
