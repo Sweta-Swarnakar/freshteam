@@ -151,19 +151,15 @@
 
 
 
-
-
-.date-div{
-
   .datepicker {
     width: 360px;
     border-radius: 4px;
     .table-condensed {
         width: 100%;
+        color: #183247;
     }
   }
 
-}
 
 .ember-application>.datepicker table tr td.active:hover,
 .datepicker table tr td.active:hover:hover,

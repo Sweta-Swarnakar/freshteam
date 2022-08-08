@@ -1,5 +1,5 @@
 <div class="action-icon">
-  {{#link-to "users.edit" user class=user.id}}{{svg-jar "edit" class="edit"}}{{/link-to}}
+  {{#link-to "users.edit" user (query-params isUserRoute="true") class=user.id }}{{svg-jar "edit" class="edit"}}{{/link-to}}
 
   <a class="init-del" onclick={{action "initiateDel"}}> {{svg-jar "trash"  class="trash"}} </a>
 
