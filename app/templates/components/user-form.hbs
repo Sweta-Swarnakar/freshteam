@@ -158,11 +158,12 @@
       as |name|
 
       }}
-      {{!-- {{#if (equal-helper userData.team name)}}
-      {{svg-jar "checkbox"}}
-
-      {{/if}} --}}
+     
       {{name}}
+       {{#if (equal-helper this.selected name)}}
+      {{svg-jar "checkbox" class="tick-mark"}}
+
+      {{/if}}
       {{/power-select}}
 
     </div>

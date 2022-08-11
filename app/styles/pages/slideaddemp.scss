@@ -160,6 +160,14 @@
     }
   }
 
+  .ember-power-select-option[aria-current=true] {
+    background-color: white;
+    color: black;
+}
+.ember-power-select-option[aria-selected=true]{
+    background-color: #E5F2FD
+}
+
 
 .ember-application>.datepicker table tr td.active:hover,
 .datepicker table tr td.active:hover:hover,
@@ -189,4 +197,15 @@
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
   background-image: none;
+}
+
+.tick-mark {
+  width: 13.21px;
+  margin-left: 200px;
+}
+
+.ember-power-select-selected-item{
+  svg{
+      display: none;
+  }
 }

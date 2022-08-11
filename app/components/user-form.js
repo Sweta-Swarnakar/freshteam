@@ -34,6 +34,7 @@ export default Component.extend({
   {
     chooseTeam(team) {
       set(this, 'userData.team', team);
+      set(this, 'selected', team);
     },
     setAvatar() {
 
