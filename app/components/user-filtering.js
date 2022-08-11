@@ -3,13 +3,16 @@ import { computed, set, get } from '@ember/object';
 
 export default Component.extend({
 
+    
     selectedTeam: "All Employees",
 
     selectedOrder: "Ascending",
 
     selectedType: "first_name",
     value: '',
+  
 
+  
 
     type: computed(function () {
         return [{
@@ -108,6 +111,18 @@ export default Component.extend({
 
     }),
 
+    validUsers: computed('searchedArray.[]', function(){
+        let searchedArray = get(this, 'searchedArray');
+
+        return searchedArray.filter((el) => {
+            return el.id != "";
+        })
+
+        
+    }),
+
+    
+
     actions: {
         selectTeam(team) {
             set(this, 'selectedTeam', team);
@@ -128,4 +143,5 @@ export default Component.extend({
 
 
     }
+
 });
