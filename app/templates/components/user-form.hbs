@@ -1,0 +1,171 @@
+<div class="add-user-header">
+
+
+  {{#if val}}
+  {{log "ans" val}}
+  {{#link-to "users"}}
+  <span class="cancel" onclick={{action "discardJunk" userData}}>X</span>
+  {{/link-to}}
+
+  {{else}}
+  {{#link-to "users-listview"}}
+  <span class="cancel" onclick={{action "discardJunk" userData}}>X</span>
+  {{/link-to}}
+  {{/if}}
+
+  <div class="add-user-title">Add Employee</div>
+
+  {{#if val}}
+  {{#link-to "users" class="reset"}}
+  <span onclick={{action "discardJunk" userData}}>Cancel</span>
+  {{/link-to}}
+  {{else}}
+  {{#link-to "users-listview" class="reset"}}
+  <span onclick={{action "discardJunk" userData}}>Cancel</span>
+  {{/link-to}}
+  {{/if}}
+
+  {{#if val}}
+  {{#link-to "users"}}
+  <button class="apply" {{action "save" userData}}>Apply</button>
+  {{/link-to}}
+  {{else}}
+  {{#link-to "users-listview"}}
+  <button class="apply" {{action "save" userData}}>Apply</button>
+  {{/link-to}}
+  {{/if}}
+
+</div>
+
+<form>
+
+
+  {{#if userData.img_url}}
+  <div class="circle">
+    <img class="choose-avatar" src="{{userData.img_url}}" />
+  </div>
+  {{else}}
+  <div class="circle">
+    {{svg-jar "avatar-loading"}}
+    <input class="upload" id="imgFile" onchange={{action "setAvatar" }} type="file" />
+  </div>
+  {{/if}}
+
+  <div class="add-user-body-div">
+    <div>
+
+      <div class="label-tag important">First Name</div>
+      {{input
+      type="text"
+      class="user-input"
+      id="firstName"
+      value=userData.first_name
+      focus-out=(action (mut showFirstNameError) true)
+      }}
+
+      {{#if showFirstNameError}}
+
+      <div class="error">
+        {{v-get userData 'first_name' 'message'}}
+      </div>
+
+
+      {{/if}}
+
+      <div class="label-tag important">Email</div>
+      {{input
+      type="text"
+      class="user-input"
+      id="email"
+      value=userData.email
+      focus-out=(action (mut showEmailError) true)
+      }}
+      {{#if showEmailError}}
+      <div class="error">
+        {{v-get userData 'email' 'message'}}
+
+      </div>
+      {{/if}}
+
+      <div class="label-tag">Designation</div>
+      {{input
+      type="text"
+      class="user-input"
+      id="design"
+      focus-out=(action (mut showDesignationError) true)
+      value=userData.designation
+      }}
+
+      {{#if showDesignationError}}
+      <div class="error">
+        {{v-get userData 'designation' 'message'}}
+
+      </div>
+      {{/if}}
+
+    </div>
+
+
+    <div>
+
+      <div class="label-tag important">Last Name</div>
+      {{input
+      type="text"
+      class="user-input"
+      id="lastName"
+      value=userData.last_name
+      focus-out=(action (mut showLastNameError) true)
+      }}
+
+      {{#if showLastNameError}}
+      <div class="error">
+        {{v-get userData 'last_name' 'message'}}
+
+      </div>
+      {{/if}}
+
+      <div class="date-div">
+
+
+        <div class="label-tag">Date of joining</div>
+        {{bootstrap-datepicker
+        class="user-input on-focus"
+
+        value=userData.joiningDate
+        autoclose=true
+        format="dd/mm/yyyy"
+        id="date"
+        focus-out=(action (mut showJoiningDateError) true)
+        }}
+        {{#if showJoiningDateError}}
+        <div class="error">
+          {{v-get userData 'joiningDate' 'message'}}
+
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="label-tag">Team</div>
+      {{!-- {{svg-jar "search" class="search-icon"}} --}}
+
+      {{#power-select
+
+      triggerClass="user-input"
+      options=teams
+      required="true"
+      selected= userData.team
+      onchange=(action "chooseTeam")
+      as |name|
+
+      }}
+     
+      {{name}}
+       {{#if (equal-helper this.selected name)}}
+      {{svg-jar "checkbox" class="tick-mark"}}
+
+      {{/if}}
+      {{/power-select}}
+
+    </div>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+<div class="sec-header">
+  <p class="emp-title">Employees</p>
+ {{#link-to "users-listview.new" }}<button class="add-user-button">Add Employees</button>{{/link-to}}
+</div> 
+{{#user-filtering model = model as |users|}}
+
+ {{users-list users = users}}
+{{/user-filtering}} 
+{{outlet}}
+

@@ -1,0 +1,34 @@
+@import "../abstracts/variables.scss";
+.header {
+ left: $sideNavWidth;
+  height: 54px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: $headerBackground;
+  box-shadow: $headerBoxShadow;
+  z-index: 1;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  margin: 10px 0px 10px 30px;
+
+  // i did header 100% and required logo distance from nav is 30px so i did 60px + 30px toadjust
+
+ 
+}
+
+.header-title {
+  color: $headerTitle;
+ 
+ font-weight: 600;
+  width: fit-content;
+  padding: 20px;
+ 
+}
+
+.header-title:hover {
+  text-decoration: underline 1px solid $headerTitleHover;
+}

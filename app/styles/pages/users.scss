@@ -1,0 +1,163 @@
+@import "app/styles/abstracts/variables.scss";
+@import "app/styles/pages/slideaddemp.scss";
+@import "app/styles/layouts/usersecheader.scss";
+@import "app/styles/components/buttons.scss";
+
+
+.content {
+  margin-left: 60px;
+  padding: 0 24px;
+
+}
+
+.functionalities {
+  margin-top: 108px;
+  height: 53px;
+  margin-left: 84px;
+  font-weight: 600;
+  display: flex;
+
+}
+
+.found-card-container {
+  width: 100%;
+  display: grid;
+  grid-gap: 18px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-right: 24px;
+
+
+}
+
+.not-found-card-container {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 202px;
+
+}
+
+.card {
+  background: $footerBg;
+  padding: 50px 20px;
+  border-radius: 2px;
+  text-align: center;
+  max-width: 400px;
+ 
+}
+
+
+
+
+.circle-div {
+ 
+  width: 82px;
+  height: 82px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  margin-left: 100px;
+
+}
+
+.circle-div{
+
+  .card-text {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 78px;
+    color: $footerBg;
+  }
+
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+}
+
+.search {
+  position: absolute;
+  right: 24px;
+  width: 400px;
+  top: 11px;
+  border: 1px solid $searchBorder;
+  border-radius: 2px;
+  padding-left: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 402px;
+  color: $searchColor;
+  width: 13px;
+  height: 13px;
+}
+
+.active-bg {
+  background-color: $selectedActiveBg;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.email {
+  font-size: 12px;
+  color: $nameColor;
+}
+
+.not-found-text-1 {
+  font-weight: 600;
+  font-size: 16px;
+  color: $notFoundText1Color;
+}
+
+.not-found-text-2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: $notFoundText1Color;
+}
+
+.not-found-icon {
+  width: 93px;
+  height: 75px;
+  opacity: 0.5;
+}
+
+.tick-round {
+  fill: $tickRound;
+  width: 30px;
+  height: 30px;
+}
+
+
+.popup-body {
+  font-weight: 400;
+  font-size: 14px;
+  color: #12344D;
+  display: flex;
+  width: 604px;
+  height: 84px;
+
+
+  span:nth-child(1) {
+    width: 310px;
+
+  }
+
+  div:nth-child(1) {
+    padding-left: 24px;
+  }
+
+}
+
+.error{
+  color: red;
+}

@@ -1,0 +1,31 @@
+@import "../abstracts/variables.scss";
+@import "app/styles/components/buttons.scss";
+@import "app/styles/components/dropdown.scss";
+.sec-header{
+    left: $sideNavWidth;
+    right: 0;
+    height: 53px;
+    background-color: $secHeaderUsers;
+    position: fixed;
+    top: 54px;
+    z-index: 1;
+    display: flex;
+  
+  }
+
+  .emp-title{
+    
+    color: $leftNavBg;
+    margin: 17px 0 10px 24px;
+    font-weight: 600;
+   
+  }
+
+
+ 
+  
+  
+
+
+
+  

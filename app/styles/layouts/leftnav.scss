@@ -1,0 +1,51 @@
+@import "../abstracts/variables.scss";
+
+.left-nav {
+  width: $sideNavWidth;
+  background-color: $leftNavBg;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.icon-logo-container {
+  padding: 14px 17px 13px 18px;
+
+  background: $leftNavBg;
+  box-shadow: 0px 1px 0px $iconBoxShadow1, 0px 2px 0px $iconBoxShadow2;
+}
+
+.icon-logo {
+  height: 25px;
+
+  opacity: 0.5;
+}
+
+.icon-logo:hover {
+  border: 1px solid $iconLogoHover;
+}
+
+.emp-logo-container {
+  width: 40px;
+  height: 40px;
+  margin: 11px 10px 0 10px;
+  background-color: $iconLogoHover;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  
+  svg{
+    width: 33px;
+    height: 20px;
+    fill: $headerBackground;
+  
+  }
+}
+
+
+
+.emp-logo-container:hover {
+  background-color: $empLogoHover;
+  border-radius: 5px;
+}

@@ -1,0 +1,27 @@
+{{yield}}
+
+<tr class="list-content">
+  <td class="table-header">Employee</td>
+  <td class="table-header">Email</td>
+  <td class="table-header">Team</td>
+</tr>
+
+{{#if users}}
+<div>
+  {{#each users as |user|}}
+
+  {{#if (not user.isNew)}}
+
+  {{#user-list-item user=user }}{{/user-list-item}}
+  {{/if}}
+  {{/each}}
+</div>
+{{else}}
+<div class="not-found-card-container">
+  {{svg-jar "directory" class="not-found-icon"}}
+
+  <div class="not-found-text-1">No employees to list in this view</div>
+  <div class="not-found-text-2">try looking for something less specific</div>
+</div>
+
+{{/if}}

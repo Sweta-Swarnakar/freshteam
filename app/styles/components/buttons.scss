@@ -1,0 +1,62 @@
+.add-user-button {
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  right: 24px;
+
+  background: $headerBackground;
+  padding: 6px 12px;
+  top: 11px;
+  border: 1px solid $footerBorder;
+  border-radius: 2px;
+}
+
+.apply {
+  margin: 10px 20px;
+  color: $footerBg;
+  background-color: $applyButtonColor;
+  border: 1px solid $filterText;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.action-icon {
+  display: flex;
+  
+
+  .edit {
+    width: 13px;
+    top: 17px;
+    height: 15px;
+    position: absolute;
+    right: 42px;
+    fill: $leftNavBg;
+  }
+  .trash{
+    width: 13px;
+    height: 15px;
+    position: absolute;
+    top: 17px;
+    right: 24px;
+    fill:  $leftNavBg;
+  }
+}
+
+.btn-danger{
+  background-color: $headerBackground;
+  border-color: $headerBackground;
+  color: $leftNavBg;
+  cursor: pointer;
+}
+
+.btn-danger:hover{
+  background-color: $headerBackground;
+  border-color: $headerBackground;
+  color: $leftNavBg;
+}
+
+.del-confirm{
+  position: relative;
+  right: 20px;
+}
